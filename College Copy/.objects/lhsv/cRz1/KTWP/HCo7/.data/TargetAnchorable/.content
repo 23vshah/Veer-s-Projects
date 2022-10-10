@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.tuitiontracker.org/" ContentHash="AnrquTiVmkmvrlLNoSBc7w" DesignTimeRectangle="552, 596, 814, 34" ElementType="Text" FriendlyName="'Florida State University'" FullSelectorArgument="&lt;webctrl id='ui-id-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ui-id-3' tag='DIV' type='' aaname='Florida State University' check:text='Florida State University' /&gt;" Guid="de3945f8-cc75-4da1-865b-8545f32db6ed" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tuition Tracker' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0RAYLl8RRJ061yUjyi6po4w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="ac04a3cd2c94b6d21f09564d644a1d50.png" xmlns="">0mMFJgO2rJkiSGL9jVjgNbQ</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "ov3fzf6wx0igjUNV9aBOFg",
+  "Reference": "6eSlhq8zPEqurRrGIGEduw/ov3fzf6wx0igjUNV9aBOFg",
+  "ParentRef": "6eSlhq8zPEqurRrGIGEduw/KTWPDylEvEisDyUJjifalg",
+  "Name": "$5,592",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-04-05T00:08:08.8768807Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-05T00:08:08.8768807Z"
+}

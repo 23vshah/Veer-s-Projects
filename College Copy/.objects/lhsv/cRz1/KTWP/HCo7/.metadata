@@ -1,0 +1,14 @@
+﻿{
+  "Id": "HCo71MALx0elCmLaFkbELQ",
+  "Reference": "6eSlhq8zPEqurRrGIGEduw/HCo71MALx0elCmLaFkbELQ",
+  "ParentRef": "6eSlhq8zPEqurRrGIGEduw/KTWPDylEvEisDyUJjifalg",
+  "Name": "Florida State University",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-04-05T00:07:33.5187758Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-05T00:07:33.5187758Z"
+}

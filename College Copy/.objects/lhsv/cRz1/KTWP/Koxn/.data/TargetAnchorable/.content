@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.tuitiontracker.org/" ContentHash="eOG72cHvdkSCDo746CiUrQ" DesignTimeRectangle="865, 563, 186, 66" ElementType="Button" FriendlyName="'SEARCH'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' aaname='SEARCH' check:text='SEARCH' /&gt;" Guid="9cbb147a-bd32-45c3-86ba-b2dd1b685809" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tuition Tracker' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="915, 580, 86, 32" ElementType="Text" FriendlyName="'SEARCH'" FullSelectorArgument="&lt;webctrl parentid='search' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='search' tag='SPAN' type='' aaname='SEARCH' check:text='SEARCH' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">6HZZYzdvA0U2zD8imeJPI3g</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">05_VY-GcOXEmDq0hC_sCuUg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="ae4965fe102780ed544e3c013a62a461.png" xmlns="">07a3YpEBPkEmGFcU7Wfd4Qw</imageRef>
+</TargetAnchorable>

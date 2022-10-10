@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.tuitiontracker.org/school.html?unitid=134097" ContentHash="P3ZHLO6yfki0T1ClJCsyMw" DesignTimeRectangle="653, 104, 610, 23" ElementType="DropDown" FriendlyName="'Change family income'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="7ca58b98-d281-4e58-886d-fa2ab8708f35" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tuition Tracker' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="34, 110, 125, 16" ElementType="Icon" FriendlyName="'IMG nav-logo'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' aaname='Tuition Tracker' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">0RbBP1TlF4EqoZQEWmVhaQA</imageRef>
+      </Target>
+      <Target DesignTimeRectangle="1846, 136, 63, 63" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='content' tag='SPAN' type='' aaname='' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">196UYH3RNuUio3Qv6ubwYPA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="InformativeScreenshot" originalValue="96e602bead10722dac49d363dfe533d6.png" xmlns="">0uHFX_QTU0kOEoeXzcedlsA</imageRef>
+</TargetAnchorable>

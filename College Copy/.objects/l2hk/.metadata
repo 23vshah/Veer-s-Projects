@@ -1,0 +1,12 @@
+﻿{
+  "Id": "l2hk4HhHA0-2LlUH28S2-w",
+  "Reference": "6eSlhq8zPEqurRrGIGEduw/l2hk4HhHA0-2LlUH28S2-w",
+  "Name": "Tuition Tracker - Google Chrome",
+  "Type": "App",
+  "Created": "2022-04-05T00:04:58.8939264Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-05T00:04:58.8939264Z"
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.tuitiontracker.org/school.html?unitid=134097" ContentHash="oyvA9GawWEeSsqoPjdUm1A" DesignTimeRectangle="990, 668, 313, 116" ElementType="Text" FriendlyName="'$5,592'" FullSelectorArgument="&lt;webctrl id='calculated-net-price' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='calculated-net-price' tag='DIV' type='' /&gt;" Guid="d809cb22-771a-4953-b5e5-d72caa59e96e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tuition Tracker' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="74052daf7193b3739a48daa93e2b9d93.png" xmlns="">0FXZoSgfGt0Ksz2-5hIKsCg</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "cL1MU2YwQUacUE_eg7hqkg",
+  "Reference": "6eSlhq8zPEqurRrGIGEduw/cL1MU2YwQUacUE_eg7hqkg",
+  "ParentRef": "6eSlhq8zPEqurRrGIGEduw/zZPcOsFvKEOo5jVA1oF4xw",
+  "Name": "Tuition Tracker - Google Chrome",
+  "Type": "Screen",
+  "Created": "2022-04-05T00:04:59.8019798Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-05T00:04:59.8019798Z"
+}

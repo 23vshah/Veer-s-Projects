@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" ContentHash="XJBNOxCgz0eeSQ9MA52scQ" FilePath="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Tuition Tracker - Google Chrome'/&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">04diDZSWJsUaanWa16G5Evg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="6b9e0d56d06802d8b990d506ccadd1ea.png" xmlns="">03yQKatWiKkaEcmwtWcjGkQ</imageRef>
+</TargetApp>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.tuitiontracker.org/" ContentHash="faOdVGooHUe0pB2ITNqUdg" DesignTimeRectangle="552, 589, 813, 56" ElementType="InputBox" FriendlyName="'INPUT tags'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' aaname='' /&gt;" Guid="e5d594d5-1678-40b3-a5b5-f5257b85aaf6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tuition Tracker' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0M3nUDerWcEabRPM6aQTClA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="eae65b883fe75d45d1204920a473598f.png" xmlns="">0tOswWQi9ZUKkYKPdcebCKw</imageRef>
+</TargetAnchorable>

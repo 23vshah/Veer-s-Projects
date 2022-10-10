@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="lgtNCGHQ906GTAG4EVHJ5w" Selector="&lt;html app='chrome.exe' title='Tuition Tracker'/&gt;" Url="https://www.tuitiontracker.org/" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0gLQLo-upSEy6N7zqygRslg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="ccd7f72a397cf61e074d55997e851d3c.png" xmlns="">0QIXYovT58kCrijiR3rGOIg</imageRef>
+</TargetApp>

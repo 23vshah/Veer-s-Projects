@@ -1,0 +1,13 @@
+﻿{
+  "Id": "KTWPDylEvEisDyUJjifalg",
+  "Reference": "6eSlhq8zPEqurRrGIGEduw/KTWPDylEvEisDyUJjifalg",
+  "ParentRef": "6eSlhq8zPEqurRrGIGEduw/cRz1B6OpaUWa7m17NcNW9A",
+  "Name": "Chrome: Tuition Tracker",
+  "Type": "Screen",
+  "Created": "2022-04-05T00:05:49.8803924Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-05T00:05:49.8803924Z"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "EC4h-vs8t0a7ZhMUiP9WEg",
+  "Reference": "6eSlhq8zPEqurRrGIGEduw/EC4h-vs8t0a7ZhMUiP9WEg",
+  "ParentRef": "6eSlhq8zPEqurRrGIGEduw/KTWPDylEvEisDyUJjifalg",
+  "Name": "Change family income",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Created": "2022-04-05T00:08:53.9642807Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-05T00:08:53.9642807Z"
+}

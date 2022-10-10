@@ -1,0 +1,12 @@
+﻿{
+  "Id": "lhsvzDXk6kWHZ352W-qsYw",
+  "Reference": "6eSlhq8zPEqurRrGIGEduw/lhsvzDXk6kWHZ352W-qsYw",
+  "Name": "Chrome: Tuition Tracker",
+  "Type": "App",
+  "Created": "2022-04-05T00:05:49.4666288Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-05T00:05:49.4666288Z"
+}

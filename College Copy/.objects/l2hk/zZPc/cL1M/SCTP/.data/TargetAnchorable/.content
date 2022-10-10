@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="a8JBxdgG9kildHFeO9MU9w" DesignTimeRectangle="226, 59, 1443, 30" ElementType="InputBox" FriendlyName="'tuitiontracker.org'" FullSelectorArgument="&lt;ctrl name='Tuition Tracker - Google Chrome - Veer' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tuition Tracker - Google Chrome - Veer' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="a4107dfb-d810-4847-863e-ffe57a9cea8c" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Tuition Tracker - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0vBPpjmfSU0SqBA33-WAGEA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="cb5e50c450520f1f9df90b234d4a074e.png" xmlns="">0TgN0e0KLp0C3Y0bWMNe3GA</imageRef>
+</TargetAnchorable>
