@@ -1,0 +1,290 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="810,2796" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="820,2731" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="778,2639" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="744,2553" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="702,2461" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="C:\\Users\\23vshah\\Downloads\\Software Dev Majors.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="668,2195" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="626,2103" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" SaveAfterEachRow="True">
+                      <ueab:ExcelForEachRowX.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1923" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If sap:VirtualizedContainerService.HintSize="550,1831" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Condition>
+                                <InArgument x:TypeArguments="x:Boolean">
+                                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">CurrentRow.ByField["Money"] == -1</mca:CSharpValue>
+                                </InArgument>
+                              </If.Condition>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="514,1645" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="472,1553" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                    <TryCatch.Try>
+                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Average Agriculture Major Salary: By Location, Industry, and Company - Zippia" sap:VirtualizedContainerService.HintSize="434,1114" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8bfdaa00-69a3-460f-8e19-dbbeec6064fe" Version="V1">
+                                        <uix:NApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,898" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="15" DisplayName="Type Into 'Jobs'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V1">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://www.zippia.com/agriculture-major/salary/" DesignTimeRectangle="1008, 187, 230, 32" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-role='combobox' name='major' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' name='major' tag='INPUT' type='text' aaname='' /&gt;" Guid="d18edfb6-faf4-4bc6-9b8e-ce98c93180bc" ImageBase64="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" InformativeScreenshot="260cafb39288f948450a0443bb2c254a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Average Agriculture Major Salary: By Location, Industry, and Company - Zippia' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                        <uix:Target DesignTimeRectangle="863, 102, 61, 42" ElementType="Text" FriendlyName="'Jobs'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' aaname='Jobs' check:text='Jobs' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAuCAYAAAB3VXTKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7ZZRa9pQFMf3gfKQhzz4ICJFyh7mIGMtMnDUUcdS6qBQSx0SaqGjFgkjD2GEkocgQfIl//vfGPVGG+bodIOeh9+DJycx93fPOTevDMPAS0ckEJFARAIRCUQkEJFAnpDQhBulSCfdtbiB6vsL3AUxkpTXSTIN4V23UTeLeYruZJ6zZBbDH7ZR1fPMOro3AeJZnjONEHx30NBzdox6z3IJnqPFTNiXARcfIxh20LBUzELjxEUQMzccwF4T4XiMRy6a+f31My+T53+tLHOObmKkiY/eoUUhFdifR/AfekVRO0a953YSjkeI0wTel6qWl1Nz4E1ZFfcdmFq8KEHRwkgJ056b5fxwCvftmy0lmOg8JNlul5Vp4zpkOXtwtGook6BkLXKySmB1jU/r/0zElhLmv+PblpazxjsXURrBfbuKFSWwHc59tkOEgZZj1NoYhcxjmySPHgYf9y/jjyRErq3lrFEmYTEUc2JWwWa/W2ie3yFUraJyJs7/OBPM+YKe2Q7WYW8+O3jqVPJYAZ4U7duIz0kw/mRuXt8RJRLsjfI3W39jMC5mAGUtYqZZLP/aBQJWQzRsrmI7piAhDF0cWezd03G24PGJvhs8Ir+p3eZZf9VaHZEf+vBVGT+6vzkiKfJgLiv92c8rigP3PkESuOioI1K1RVZR6/+9WwoS+r7aJb7kjAu9tJ8YUBR0/IyPJS4u9l20a6sc602Pz4uQLD+WQozPXu91OJZ8LL08RAIRCUQkEJFARAIRCUQkEJFARAIRCUQkEJFARAIRCUQkEJFARAIRCUQkEJFARAIRCUQkEJFARAIRCUQkEJFgGPgF3y1y6NrcHc4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                        <uix:Target DesignTimeRectangle="128, 92, 152, 36" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl src='https://static.zippia.com/ui-router/images/header/logo_white.svg' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl src='https://static.zippia.com/ui-router/images/header/logo_white.svg' tag='IMG' type='' aaname='Zippia Official Logo' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                                <uix:NTypeInto.Text>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">CurrentRow.ByField["Major"] + "[k(enter)]"</mca:CSharpValue>
+                                                  </InArgument>
+                                                </uix:NTypeInto.Text>
+                                              </uix:NTypeInto>
+                                              <uix:NClick ClickType="Single" DelayBefore="2" DisplayName="Click 'Environmental Science'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8bfdaa00-69a3-460f-8e19-dbbeec6064fe">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://www.zippia.com/agriculture-major/salary/" DesignTimeRectangle="1028, 228, 169, 22" ElementType="Text" FriendlyName="'Environmental Science'" FullSelectorArgument="&lt;webctrl aaname='Environmental Science' parentid='rbt-menu-item-0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='rbt-menu-item-0' tag='SPAN' type='' /&gt;" Guid="81470548-9ded-460f-a315-f6d93c34b457" ImageBase64="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" InformativeScreenshot="32b64c250cba1c55d91a4e12e49a09c3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Average Agriculture Major Salary: By Location, Industry, and Company - Zippia' /&gt;" SearchSteps="FuzzySelector">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                        <uix:Target DesignTimeRectangle="1016, 95, 102, 36" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname='Log In' check:text='Log In' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALHSURBVHhe7ZtBi9pAFMf7gTz5EbyabxG8BnrNSTxuL+5JyqIHKSy5SCl7EAXpxUNJoeQkFAIlguglIASWgPDve0l0YxKza7Ekw76BH5I3L4O8XybOCPOh0WhAqD8iShHORDWbTbRaLbTbbWiaJlQA154dsIu0m5Mo7hBB9YFdpGWdRLHFohuE6mAnOVEym+oHO8mJKkoUqkdEKYKIUgQRpQgiShFElCKIKEUQURcxYJp6QbwaKhM1+wMgcDAs6DvRG2P520dwoFxuhxDB2sbk7lIBDQwWLvwgTG6gFvhwFwMYhfkJU48T4TykYg8OgtDDrJeKHZlzPvVl4/+R6kStuTaXRekjGz7VO9w5eOobUczoP8HZUfDgwxllZXVpTBYUwFsMYXYo1jExXHgkOsDqSzo3Q1T4AlEUxZ6+I4+VyxdRxBirZ5K0nqGb60uEhC4mqQLe//BpwBCrx394XZWJohZulhikZYmoGP2bS50+7H6+L6JPs41LNT9KsSKx2C1hZnPfQomorRN/nj00Iipm6FBpnlewCvpihuCUwBkm1zMqW/r6SkpEeXMNXeqPXqo0vn7KF1GxqJLfr0ui4E5SOck4SSuV+IooTdOTsUK67oqoI3pUiGtefSa+byhAs3CczX3LbHtVFPOyWHGcLfeIKK0T/+Zcs5jQH1fR62m7oCf+LP9WoogOzeQ9BaMmoiL0kQOf9k/hxoZ1Wp5bsDfJU51bntPr6Ve88tv+tHD/kWK8PJ+6UcFvIorpkXj+Cu9GFG94sy0jTr+zrtzw6vj01Ya3jyoZt5Du2a2wHJkF+QlFG97PiahpKpbADxHt1t6HKNUxet3yfztujIhSBBGlCCJKEUSUIogoRRBRiiCiFEFEKYKIUoScKDkkUD8KDwnIsZv6UXjsRg6y1Qt2UXiQ7SiLLYqw6uDas4O0JOZMlFBfRJQSNPAXoubTuE6WZ1AAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                        <uix:Target DesignTimeRectangle="1126, 95, 111, 36" ElementType="Button" FriendlyName="'Sign Up'" FullSelectorArgument="&lt;webctrl aaname='Sign Up' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sign Up' tag='BUTTON' type='button' check:text='Sign Up' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHMAAAAoCAYAAADNCsXSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANYSURBVHhe7ZtPS+NAFMD3A3VZvO5n8LYnL3v05mFhv8Ce7Kl4EBZEeijsoYelIKUX2YO4LBK8eOpFgmCliCIxtmlj0r59b/LHmcxoPagx0zfwA/vyktT368tMAvlQq9WAsQOWaRGKzI+fv8Cnr3uw8m0IK99vmPcMOiJX5EyTSUGWWEHQWSY0lyk60pTMvHvInSKTu7LCoDtVpimJqQws0yJYpkWwTItgmRbBMi2CZVqEvTLrPqxvGeIWU47M+gja7gzCGSQjmsP1+RR+SDmdIcaDCBpSTLA1ht75DPwo2ZWG78XQ69yqeU4MMML961IspXE6Nx87ZwzOCA98OdW2Gb/XEZ6rMMKbCFpNKecNKEXmtovFnM2g10YB2EGNowgGwxA2pJzOJVakWLTmFFySGKC8rg+rGFv9GUBvmMjZlnNJJhUVhcjHJRbLDMAJcGeTTNP3Eueag7OXft7C/X0M0Y9JzntlSpEpCnIVChmm7YRetDEcUoGmEewauk0jlUnDP5soQl9dJrEfQYixk30p9sqUIlN0Jv6j/X+jR4VqRRPFARic+FqukbTA/dNY7OefBvm5WOZL0pwAOknGKIbDA12qVrSsYF0171HyAnuJPPzbde7Etje5zNKcuwyX2YRb2DyO4TpdyIRDdW7TipYuMvoHDzl50cUodIZS4Ds8XiLU6aZyX1ymOpZmAaSAK9vWGRUaRf318rhWtJ0QBlQkN3jYN6PYGaZYPe2WKAbnfJFMD3pXmGuY15/VmSVRjsy6pxapeQ/XWA6a17KYXjQPdkk6rYKLv/jnyCSy1TCNJ2Wm8/o0hpay2EoXYRcTKYYsr0wPWhdzCL0I2nRrQpfbPt1w4mLl4InOJKi7qJjRDA7/jGENY3Rr0sHjPUsm5XcjENP1ApmZeP8C73/p4UN+BcFztwu5y9yZa50Q+h4KlR4auMdjpVsffWhARe3HykODcDqHgXsPjR0pT8yxWOCOFEvZwOKHi2Qiq78m4NyQwGSE9HDi98MPLueJc70lpcgsHw/Wm8lDB/P2arKkMu2EZVoEy7QIlmkRLNMiWKZFsEyLYJkWwTItQpXJLw5Vl+KLQ/xKX3XRXunjl20rCjrTXrbNhIoOZanvH3RErjKRmkym2rBMa6jBfzu2+0x37CWJAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ClickType="Single" DelayBefore="5" DisplayName="Click 'Salary'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://www.zippia.com/food-science-major/" DesignTimeRectangle="228, 260, 42, 50" ElementType="Text" FriendlyName="'Salary'" FullSelectorArgument="&lt;webctrl parentid='navigation' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='navigation' tag='A' type='' aaname='Salary' check:text='Salary' /&gt;" Guid="4cafe887-e547-432d-80fc-b302301d428a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAA2CAYAAAC4PKvBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMISURBVGhD7Zq7SytBFIf9n6zESgtBSBGxEAsjpjGKYCUiEdEiCOkMGEyhjShWPkAFO0EFLcRHlYRICk2i8RF8o6i/y+/cXdm42WwuXEcD88FgZnKy++2ZM7ObYM3HxweqsdVcX1+jGlsNqhQtrhotrhotrhotrhotrhotrhotrhotrhotrpr/Lp5KpZDJZIze92ETPzs7QygUgs/nkzY2NobDw0P5Zl0JkUgEKysrRu/7KBI/OTlBe3s7FhYWkMvlcHp6iqWlJezu7hoR7vyI+Pz8PMLhMN7e3owRZx4fH3F3d2ebCSdxp3grr6+vuL29rej8ReKLi4tSGi8vL8aInc3NTbS0tKC1tVWa1+vF8fGx8a5d3C1+f38fExMT2NjYQFNTEzweD2ZnZzEwMCAXa8ILnp6eliY/CBnjQjqdloNPTU3h6urKGC2GWbu/v5fXPMDy8jJGRkY+L/aruFs8xSk7OTmJp6cnGcvn8wgEAkgmk9InHPP7/Tg6OpK+bXFms1mMjo6ivr5erpq7RLnpjcfj6OnpQaFQkL5bjX+NpzjX1cXFhfTJ1+ySnZ0dDA4Ofs6CTdyEWeKUNTc3Y3V11Rj9O76+vo7x8XHZddra2tDV1eUo7hZP8WAwiOfnZ+mbMNt9fX24ubmRmufasx7XUdyENdrb2ytTzv25o6MDc3NzuLy8lMXEE3d2dpYUryTeSZyZZYaZaR6HpcNdzsRV3Dq1a2trGBoa+qxFsre35yheSbyTOOGCZabNv9bdpkg8kUjIdmTC17wZRaNR+dDW1ha6u7tl+gh/NR0eHnYslUriy4lzQfb390u2mXkrReIzMzOoq6tDbW2ttIaGBsRiMTw8PMj7nD5eSGNjoywoSvHmxCktJV5JfDlxc5FS3JpQYisVBrOeGfj+/m6MFsOTWPdYN/413qTU7mLiWuM/yfn5ucySdT83+ZXifGbi+mB982ZY6hHgV4ofHByI8Pb2tuPjx68ulXJocdVocdVocdVocdVocdVocdVocdVU77828Ytq9bUg/gDW3lNScNYaEwAAAABJRU5ErkJggg==" InformativeScreenshot="3d26ed9c6befd4a00986a391a992fb9b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Best Jobs For Food Science Majors In 2022 - Zippia' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                        <uix:Target DesignTimeRectangle="128, 92, 152, 36" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl src='https://static.zippia.com/ui-router/images/header/logo_white.svg' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl src='https://static.zippia.com/ui-router/images/header/logo_white.svg' tag='IMG' type='' aaname='Zippia Official Logo' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NGetText DelayBefore="3" DisplayName="Get Text 'Pennsylvania'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="8bfdaa00-69a3-460f-8e19-dbbeec6064fe">
+                                                <uix:NGetText.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://www.zippia.com/food-science-major/salary/" DesignTimeRectangle="351, 388, 274, 50" ElementType="Text" FriendlyName="'$64,422'" FullSelectorArgument="&lt;webctrl parentid='__next' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='14' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="9b10b93a-9588-485a-b3fd-2f2bff418494" InformativeScreenshot="f1b86d820e1a8ad366018ab48f2c2fb8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Average Food Science Major Salary: By Location, Industry, and Company - Zippia' /&gt;" SearchSteps="FuzzySelector">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                        <uix:Target DesignTimeRectangle="128, 388, 224, 50" ElementType="Text" FriendlyName="'Pennsylvania'" FullSelectorArgument="&lt;webctrl parentid='__next' tag='TABLE' /&gt;&lt;webctrl tableRow='14' tag='TD' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='Pennsylvania' check:text='Pennsylvania' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NGetText.Target>
+                                                <uix:NGetText.Text>
+                                                  <OutArgument x:TypeArguments="ue:ExcelValue">
+                                                    <mca:CSharpReference x:TypeArguments="ue:ExcelValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">CurrentRow.ByField["Money"]</mca:CSharpReference>
+                                                  </OutArgument>
+                                                </uix:NGetText.Text>
+                                              </uix:NGetText>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </uix:NApplicationCard.Body>
+                                        <uix:NApplicationCard.TargetApp>
+                                          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="c0fc02d3754bbbaab7f3a37101bc6187.png" Selector="&lt;html app='chrome.exe' title='Average Agriculture Major Salary: By Location, Industry, and Company - Zippia'/&gt;" Url="https://www.zippia.com/agriculture-major/salary/" />
+                                        </uix:NApplicationCard.TargetApp>
+                                      </uix:NApplicationCard>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,129" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="ue:ExcelValue">
+                                                <mca:CSharpReference x:TypeArguments="ue:ExcelValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">CurrentRow.ByField["Money"]</mca:CSharpReference>
+                                              </OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="ue:ExcelValue">
+                                                <mca:CSharpValue x:TypeArguments="ue:ExcelValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">0</mca:CSharpValue>
+                                              </InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRowX.Body>
+                      <ueab:ExcelForEachRowX.Range>
+                        <InArgument x:TypeArguments="ue:IReadRangeRef">
+                          <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">Excel.Sheet["Sheet1"].Range["A1:C255"]</mca:CSharpValue>
+                        </InArgument>
+                      </ueab:ExcelForEachRowX.Range>
+                    </ueab:ExcelForEachRowX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
