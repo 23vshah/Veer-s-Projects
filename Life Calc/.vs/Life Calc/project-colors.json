@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "298a16de-20ff-4262-865e-d782591de99c": {
+      "ProjectGuid": "298a16de-20ff-4262-865e-d782591de99c",
+      "DisplayName": "Life Calc",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
