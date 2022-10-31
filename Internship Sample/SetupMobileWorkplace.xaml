@@ -1,0 +1,1193 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SetupMobileWorkplace1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_S_Url" Type="InArgument(x:String)" />
+    <x:Property Name="in_S_Username" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1008,5012</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SetupMobileWorkplace1_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="Opens up the website and converts it to the mobile workplace on chrome&#xA;&#xA;Inputs: Name - Type - Description&#xA;in_S_Url - String - URL of website&#xA;in_S_Username - String - Username" DisplayName="SetupMobileWorkplace" sap:VirtualizedContainerService.HintSize="1018,4947" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="B_Started_Mobile" />
+      <Variable x:TypeArguments="ui:UiElement" Name="UiE_Logo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Start Process" sap:VirtualizedContainerService.HintSize="976,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;SetupMobileWorkPlace Started&quot;]" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invokes the file that checks whether the website is currently on the mobile homepage" DisplayName="Invoke Check_Mobile_Homepage" sap:VirtualizedContainerService.HintSize="976,157" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Helper Processes\Check_Homepage_Mobile.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_B_Is_Homepage">[B_Started_Mobile]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <If Condition="[NOT(B_Started_Mobile)]" DisplayName="If Not Already Mobile" sap:VirtualizedContainerService.HintSize="976,2391" sap2010:WorkflowViewState.IdRef="If_39">
+      <If.Then>
+        <Sequence sap2010:Annotation.AnnotationText="Opens up blank incognito website" DisplayName="Incognito Blank Page" sap:VirtualizedContainerService.HintSize="831,2241" sap2010:WorkflowViewState.IdRef="Sequence_60">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="ui:Browser" Name="Br_Incognito" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="789,2118" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" NewSession="True" Private="True" UiBrowser="[Br_Incognito]" Url="about:blank">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,2016" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="B_Dev_Tools_Open" />
+                    <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Open_1" />
+                    <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Open_2" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_6" />
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Send Hotkey - Open DevTools" sap:VirtualizedContainerService.HintSize="713,117" sap2010:WorkflowViewState.IdRef="SendHotkey_22" Key="&quot;I&quot;" KeyModifiers="Ctrl, Shift">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f3963e2d-c69a-42ce-ab6a-f7657794bbb3">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:UiElementExists DisplayName="Element Exists - DevTools" Exists="[B_Dev_Tools_Open]" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_62">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="889941fd-8bae-4865-9a1c-78c528463b50" InformativeScreenshot="e6d3ebc3e777e5e2a22372635653fdfd" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='* - Google Chrome' idx='1' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Main toolbar' role='grouping' /&gt;&lt;ctrl name='Select an element in the page to inspect it' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[NOT(B_Dev_Tools_Open)]" DisplayName="If DevTools Open" sap:VirtualizedContainerService.HintSize="713,266" sap2010:WorkflowViewState.IdRef="If_36">
+                    <If.Then>
+                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Send Hotkey - Open DevTools" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_23" Key="&quot;I&quot;" KeyModifiers="Ctrl, Shift">
+                        <ui:SendHotkey.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3963e2d-c69a-42ce-ab6a-f7657794bbb3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='about:blank - Google Chrome' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SendHotkey.Target>
+                      </ui:SendHotkey>
+                    </If.Then>
+                  </If>
+                  <ui:UiElementExists DisplayName="Element Exists DevTools" Exists="[B_Dev_Tools_Open]" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_63">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="889941fd-8bae-4865-9a1c-78c528463b50" InformativeScreenshot="e6d3ebc3e777e5e2a22372635653fdfd" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='* - Google Chrome' idx='1' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Main toolbar' role='grouping' /&gt;&lt;ctrl name='Select an element in the page to inspect it' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[B_Dev_Tools_Open]" DisplayName="If DevTools NOT Open" sap:VirtualizedContainerService.HintSize="713,242" sap2010:WorkflowViewState.IdRef="If_37">
+                    <If.Then>
+                      <ui:LogMessage DisplayName="Log Message - Successful Open DevTool" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_54" Level="Info" Message="[&quot;Dev Tools Successfully Opened&quot;]" />
+                    </If.Then>
+                    <If.Else>
+                      <ui:LogMessage DisplayName="Log Message - Failed Open DevTool" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_55" Level="Error" Message="[&quot;Dev Tools Not Opened&quot;]" />
+                    </If.Else>
+                  </If>
+                  <ui:UiElementExists DisplayName="Element Exists - Mobile Workplace" Exists="[B_Mobile_Open_1]" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_64">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1564c02-454c-4263-814a-9d4d88143b5b" InformativeScreenshot="228f3686f1f9789a7317048e39e1e099" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='The Technology Company - Google Chrome' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Rotate' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:UiElementExists sap2010:Annotation.AnnotationText="Just an additional check to ensure that the mobile workplace has opened. " DisplayName="Element Exists - Mobile Workplace 2" Exists="[B_Mobile_Open_2]" sap:VirtualizedContainerService.HintSize="713,150" sap2010:WorkflowViewState.IdRef="UiElementExists_65">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1564c02-454c-4263-814a-9d4d88143b5b" InformativeScreenshot="d0b536154507aaf9e5ba236d173e9047" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='about:blank - Google Chrome' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Dimensions:*' role='menu button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:UiElementExists>
+                  <If Condition="[NOT(B_Mobile_Open_1 OR B_Mobile_Open_2)]" DisplayName="If Mobile Workplace NOT Open" sap:VirtualizedContainerService.HintSize="713,266" sap2010:WorkflowViewState.IdRef="If_38">
+                    <If.Then>
+                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - Open Mobile Workplace" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="SendHotkey_24" Key="&quot;M&quot;" KeyModifiers="Ctrl, Shift">
+                        <ui:SendHotkey.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f3963e2d-c69a-42ce-ab6a-f7657794bbb3">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SendHotkey.Target>
+                      </ui:SendHotkey>
+                    </If.Then>
+                    <If.Else>
+                      <ui:LogMessage DisplayName="Log Message - Successful Open Mobile Workplace" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_56" Level="Info" Message="[&quot;Mobile Workplace Successfully Opened&quot;]" />
+                    </If.Else>
+                  </If>
+                  <ui:NavigateTo Browser="[Br_Incognito]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="713,59" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[in_S_Url]" />
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+          </ui:OpenBrowser>
+        </Sequence>
+      </If.Then>
+    </If>
+    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element 'logo'" FoundElement="[UiE_Logo]" sap:VirtualizedContainerService.HintSize="976,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+      <ui:WaitUiElementAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="281e72f2-ea82-4560-9492-ba0a19393438" InformativeScreenshot="97fc9e99695e40ec13e41c26131ebcb9" Selector="&lt;html app='chrome.exe' title='Company Name *' /&gt;&lt;webctrl id='*logo' tag='IMG' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:WaitUiElementAppear.Target>
+    </ui:WaitUiElementAppear>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Argument: in_S_Url - Url of website to convert into mobile version" AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Browser - " sap:VirtualizedContainerService.HintSize="976,1856" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InUiElement="[UiE_Logo]" InteractionMode="Simulate" OpenMode="Never" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Sequence - Flowchart" sap:VirtualizedContainerService.HintSize="759,1608" sap2010:WorkflowViewState.IdRef="Sequence_46">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Flowchart sap2010:Annotation.AnnotationText="Flowchart for core of the program" DisplayName="SetupMobileWorkplace FlowChart" sap:VirtualizedContainerService.HintSize="717,1514" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+              <Flowchart.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="B_Is_Desktop_Version" />
+                <Variable x:TypeArguments="x:Boolean" Name="B_Switch_Mobile" />
+                <Variable x:TypeArguments="x:Boolean" Name="B_Security_Q_Mobile" />
+                <Variable x:TypeArguments="x:Boolean" Name="B_Is_Mobile" />
+              </Flowchart.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">270,2.66666666666666</av:Point>
+                  <av:Size x:Key="ShapeSize">60,75</av:Size>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <av:PointCollection x:Key="ConnectorLocation">270,40 70,40 70,86.6666666666667</av:PointCollection>
+                  <x:Double x:Key="Width">682.99999999999989</x:Double>
+                  <x:Double x:Key="Height">1447.3653333333332</x:Double>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Flowchart.StartNode>
+                <x:Reference>__ReferenceID17</x:Reference>
+              </Flowchart.StartNode>
+              <FlowStep x:Name="__ReferenceID2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">0,456</av:Point>
+                    <av:Size x:Key="ShapeSize">200,68</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">200,489 299.5,489 299.5,546.666666666667</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Checks if the switch to mobile version conversion exists" DisplayName="Check Mobile Switch" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Open_1" />
+                    <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Open_2" />
+                    <Variable x:TypeArguments="x:Boolean" Name="B_Security_Q" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Is Desktop" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Trace" Message="[&quot;Is Desktop Version&quot;]" />
+                  <ui:UiElementExists DisplayName="Element Exists - Switch to Mobile Version" Exists="[B_Switch_Mobile]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_36">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f59f231-080a-409f-9ab8-b55b443e2f7b" InformativeScreenshot="91f069b8ff46d7ecb66d709c585c1736" Selector="&lt;webctrl parentid='switchToMobile' tag='STRONG' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowDecision x:Name="__ReferenceID4" Condition="[B_Switch_Mobile]" DisplayName="Switch_Mobile" sap:VirtualizedContainerService.HintSize="82,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">259,546.666666666667</av:Point>
+                        <av:Size x:Key="ShapeSize">82,87</av:Size>
+                        <av:PointCollection x:Key="FalseConnector">342,590.166666666667 372,590.166666666667 372,588.333333333333 430,588.333333333333</av:PointCollection>
+                        <av:PointCollection x:Key="TrueConnector">259,590.166666666667 229,590.166666666667 229,588.333333333334 209,588.333333333334</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">9,555.333333333334</av:Point>
+                            <av:Size x:Key="ShapeSize">200,68</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">109,623.333333333334 109,1249.66666666667 260,1249.66666666667</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Click Switch to Mobile" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - Switch Mobile Exists" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Trace" Message="[&quot;Switch to Mobile Exists&quot;]" />
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="Go to mobile version and execute final sequence" ClickType="CLICK_SINGLE" DisplayName="Click Switch to Mobile" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f40a6ad4-7c85-4ae9-9710-e7d7a0063a60" InformativeScreenshot="91f069b8ff46d7ecb66d709c585c1736" Selector="&lt;webctrl parentid='switchToMobile' tag='STRONG' /&gt;&#xA;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:Click>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">260,1223.66666666667</av:Point>
+                                <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">360,1274.66666666667 360,1304.66666666667 350,1304.66666666667 350,1335.33333333333</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invokes the file that checks whether the website is currently on the mobile homepage" DisplayName="Invoke Check_Mobile_Homepage" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Helper Processes\Check_Homepage_Mobile.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <OutArgument x:TypeArguments="x:Boolean" x:Key="out_B_Is_Homepage">[B_Is_Mobile]</OutArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InvokeWorkflowFile>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID0">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">250,1335.33333333333</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap2010:Annotation.AnnotationText="Check if mobile workplace has successfuly loaded" DisplayName="Final Sequence" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:Boolean" Name="B_Dev_Tools_Open" />
+                                    <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Version" />
+                                    <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Version_1" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[B_Is_Mobile OR B_Started_Mobile]" DisplayName="If Mobile Workplace Successful" sap:VirtualizedContainerService.HintSize="714,248.666666666667" sap2010:WorkflowViewState.IdRef="If_20">
+                                    <If.Then>
+                                      <ui:LogMessage DisplayName="Log Message - Success" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[&quot;Mobile Workplace Set Successfully&quot;]" />
+                                    </If.Then>
+                                    <If.Else>
+                                      <ui:LogMessage DisplayName="Log Message - Fail" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Warn" Message="[&quot;Mobile Workplace NOT Set&quot;]" />
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <FlowStep x:Name="__ReferenceID3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">430,555.333333333333</av:Point>
+                            <av:Size x:Key="ShapeSize">200,68</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">530,623.333333333333 530,653.333333333333 310,653.333333333333 310,685.333333333333</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap2010:Annotation.AnnotationText="Open up developer tools and open mobile workplace" DisplayName="Switch to Mobile - DevTools" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="B_Dev_Tools_Open" />
+                            <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Open_1" />
+                            <Variable x:TypeArguments="x:Boolean" Name="B_Mobile_Open_2" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: The Technology Company" sap:VirtualizedContainerService.HintSize="874,2186.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="WindowMessages" Version="V1">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Open DevTools" sap:VirtualizedContainerService.HintSize="840,1968.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message - No Switch Mobile" sap:VirtualizedContainerService.HintSize="798,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="Trace" Message="[&quot;Switch to Mobile Doesn't Exist&quot;]" />
+                                  <ui:UiElementExists DisplayName="Element Exists - DevTools" Exists="[B_Dev_Tools_Open]" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="UiElementExists_58">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="889941fd-8bae-4865-9a1c-78c528463b50" InformativeScreenshot="e6d3ebc3e777e5e2a22372635653fdfd" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='The Technology Company - Google Chrome' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Main toolbar' role='grouping' /&gt;&lt;ctrl name='Select an element in the page to inspect it' role='push button' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:UiElementExists.Target>
+                                  </ui:UiElementExists>
+                                  <If Condition="[NOT(B_Dev_Tools_Open)]" DisplayName="If DevTools Open" sap:VirtualizedContainerService.HintSize="798,270.666666666667" sap2010:WorkflowViewState.IdRef="If_33">
+                                    <If.Then>
+                                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayMS="2" DisplayName="Send Hotkey - Open DevTools" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_19" Key="&quot;I&quot;" KeyModifiers="Ctrl, Shift">
+                                        <ui:SendHotkey.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3963e2d-c69a-42ce-ab6a-f7657794bbb3" Selector="&lt;webctrl tag='INPUT' type='text' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:SendHotkey.Target>
+                                      </ui:SendHotkey>
+                                    </If.Then>
+                                  </If>
+                                  <ui:UiElementExists DisplayName="Element Exists DevTools" Exists="[B_Dev_Tools_Open]" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="UiElementExists_59">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="889941fd-8bae-4865-9a1c-78c528463b50" InformativeScreenshot="e6d3ebc3e777e5e2a22372635653fdfd" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='The Technology Company - Google Chrome' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Main toolbar' role='grouping' /&gt;&lt;ctrl name='Select an element in the page to inspect it' role='push button' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:UiElementExists.Target>
+                                  </ui:UiElementExists>
+                                  <If Condition="[B_Dev_Tools_Open]" DisplayName="If DevTools NOT Open" sap:VirtualizedContainerService.HintSize="798,342.666666666667" sap2010:WorkflowViewState.IdRef="If_34">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,189.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message - Successful Open DevTool" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="Trace" Message="[&quot;Dev Tools Successfully Opened&quot;]" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,189.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message - Failed Open DevTool" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Error" Message="[&quot;Dev Tools Not Opened&quot;]" />
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Mobile Workplace" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="43737378-cf4e-4131-b94d-a35199497f56" InformativeScreenshot="2007a424943f0357cc98d94a537d8875" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='The Technology Company - Google Chrome' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Main toolbar' role='grouping' /&gt;&lt;ctrl name='Toggle device toolbar' role='push button' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                  <ui:UiElementExists DisplayName="Element Exists - Mobile Workplace" Exists="[B_Mobile_Open_1]" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="UiElementExists_60">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1564c02-454c-4263-814a-9d4d88143b5b" InformativeScreenshot="228f3686f1f9789a7317048e39e1e099" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='The Technology Company - Google Chrome' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Rotate' role='push button' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:UiElementExists.Target>
+                                  </ui:UiElementExists>
+                                  <ui:UiElementExists sap2010:Annotation.AnnotationText="Just an additional check to ensure that the mobile workplace has opened. " DisplayName="Element Exists - Mobile Workplace 2" Exists="[B_Mobile_Open_2]" sap:VirtualizedContainerService.HintSize="798,151.333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_61">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1564c02-454c-4263-814a-9d4d88143b5b" InformativeScreenshot="d0b536154507aaf9e5ba236d173e9047" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='about:blank - Google Chrome' /&gt;&lt;ctrl name='DevTools' role='document' /&gt;&lt;ctrl name='Dimensions:*' role='menu button' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:UiElementExists.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:UiElementExists>
+                                  <If Condition="[NOT(B_Mobile_Open_1 OR B_Mobile_Open_2)]" DisplayName="If Mobile Workplace NOT Open" sap:VirtualizedContainerService.HintSize="798,270.666666666667" sap2010:WorkflowViewState.IdRef="If_35">
+                                    <If.Then>
+                                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - Open Mobile Workplace" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_20" Key="&quot;M&quot;" KeyModifiers="Ctrl, Shift">
+                                        <ui:SendHotkey.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f3963e2d-c69a-42ce-ab6a-f7657794bbb3">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:SendHotkey.Target>
+                                      </ui:SendHotkey>
+                                    </If.Then>
+                                    <If.Else>
+                                      <ui:LogMessage DisplayName="Log Message - Successful Open Mobile Workplace" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_53" Level="Trace" Message="[&quot;Mobile Workplace Successfully Opened&quot;]" />
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADPSURBVDhPYwCBw0zSFw4zy/wnCTNJnwdrBgGsCojAUO2jBoAANkliMFQ7lQw4pWTx/5JjCJhGVwgSOyakBWafM3KDi0O1Qwx42Nj3/+XCVf/fbNjx/25hPVjhw4ZesEaQ3CWnULCmDweO4zYApujLhatgPgiDDQLSdwvqwC78cv4KYQN+PHj8/+nEOWCDrgUlQwwAugokDxLDaQDIFpCzQZpBTn06Yfb/H/cfoRiO0wvgQAQqggUSiA+yHSRGVCCSg6HagQaQl50vMDAwMAAARO/T/xnwzJQAAAAASUVORK5CYII=" InformativeScreenshot="550ae6044930c50bcc6ef6c26156823a.png" Selector="&lt;html app='chrome.exe' title='The Technology Company'/&gt;" Url="[in_S_Url]" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">210,685.333333333333</av:Point>
+                                <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">310,753.333333333333 310,783.333333333333 305.641666666667,783.333333333333 305.641666666667,804.666666666667</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence sap2010:Annotation.AnnotationText="Opens up website and clears the cache" DisplayName="Clear Cache" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser - Chrome Settings" sap:VirtualizedContainerService.HintSize="472.666666666667,1237.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="WindowMessages" Version="V1">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,1019.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                      <TryCatch.Try>
+                                        <Sequence DisplayName="Clear Cookies" sap:VirtualizedContainerService.HintSize="376,781.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:Boolean" Name="Cache_Exist" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NGoToUrl sap2010:Annotation.AnnotationText="Go to the Chrome cookie settings for the website" DisplayName="Go To URL - Settings" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[&quot;chrome://settings/content/siteDetails?site=&quot; + in_S_Url]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NGoToUrl>
+                                          <ui:UiElementExists DisplayName="Element Exists - Clear data" Exists="[Cache_Exist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_42">
+                                            <ui:UiElementExists.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1f3b1170-3512-4fc7-9d76-9bcb6ef0e44e" InformativeScreenshot="2c8f30c6fd646512e228e1fc5ed49d64" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Settings - Google Chrome' /&gt;&lt;ctrl name='Settings' role='document' /&gt;&lt;ctrl name='Usage' role='grouping' /&gt;&lt;nav up='1' /&gt;&lt;ctrl name='Clear data' role='push button' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:UiElementExists.Target>
+                                          </ui:UiElementExists>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Clear Data" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bbd6e574-ee67-4b26-b065-508c33eeac8c" InformativeScreenshot="6d650cb6671733f3da25b8152c282df7" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Settings - Google Chrome' /&gt;&lt;ctrl name='Settings' role='document' /&gt;&lt;ctrl name='Usage' role='grouping' /&gt;&lt;nav up='1' /&gt;&lt;ctrl name='Clear data' role='push button' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Clear Verifcation" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6e7b3e2a-3218-4fed-a81a-e96d36e380fe" InformativeScreenshot="c33c76a5c6f5bc3a0a6d70235a261145" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Settings - Google Chrome' /&gt;&lt;ctrl name='Settings' role='document' /&gt;&lt;ctrl name='Clear' role='push button' /&gt;&lt;nav up='1' /&gt;&lt;ctrl name='Clear' role='push button' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Trace" Message="[&quot;Cleared Cookies&quot;]" />
+                                        </Sequence>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Trace" Message="[&quot;Cache Failed&quot;]" />
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                    </TryCatch>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQeSURBVGhD7ZgJT+JAHEf9SPsFd+OtXHLI7X1+IGPiZo1ZYoyCoHhk5ea/85t22qEdoGWGbDahyQstMfLedCjTLi22xTbn7fLyki4uLjjn5+d0Bs7O6PQUnNLJCTih4+NjztHRER2Cw0M6AAcHtA/292mPUd7b45TKZSqVyvibZjab/WZ/nPkN4oPBYCJ9L30bZ7/vvsf3+zQcDgmDU6lUEDi/CBHQ6/U4XUHXpdPtSrDjDnsF7Lht77fbHb7f4q8dHoGAj48P+v27grMznwhMm8FgODGgqxHw+flJb29vdHd3h6nVTJqOwJyfdgZ0At7f36nZbNLLywv9ur3F96KZTBqMwBd2nlMI8q+vr9RoNKhWq9HNzU8qFIssImkmAlcbBDjiMwVY8hajARj5er1Oz8/PVK1W6fHxka6vrylfKJiJwKXSFyDJT5s+HHv0VQEQx8gL+YeHB7q/v6erqyvK5fNNW2P2Ddd5J2BE3MKVny0gHo+PJZXOkK0x+4YfKR7gEZ8oD+wA7HvnPz9m1NjoP1VrElV6emJnglGvNyiZTusH4NfVH2AJjg1gx86IS6PvDcDxKG1qtdr0xej1+pRMGQ3ojhEH00ffYlIAk/cE7KRS+gFY22BJ4JcWqOU5ELX3IRl09J2AZFI/AAszdYBHHHRdYX7pZGIj8iEDEjsmAtiK0gpgwgIhLCONPI6FvEUweX/Ajn4AlsRYRfqEBfYZGScPwbCjLwLiCRMBbC2vDPCIW/K2pH0cWH5MQCyR0A/AzYj3OyBLA2fUgf1eMHngl3cC4iYC2F0UzoAsLLDOhi0ovQ+xMPJzDcBtoH8KuWKyuFee73NRFeqpIwdEY3H9ANy/Yt3iCAOPtFd8+siD8fIAS/dILGYqQD2FhIxKXEce8ICogQA8PeixM4APhqB49YH3JUaFZabLf321+Op3Oxo1EFAqW1NIJQ2YVDBxYMlPDmjRHxEQMRBQLJX83wEFamEBkw4k3+byImArEjEQUBwfoJb14sqrhEew5UXA5raBAHaD7XwHwhF81DmSvBuwbSCgEDbAFteQdwK2DATkC4WAATOIA4W8CNjY3NIPyOXHBUjCknRgcaAQFyBg3UxA3g6QZD3CoaQ5rYnygAdsbOoHZHMsgK1L9IQlFLIqELBmJiDHA5QyoZg+6jI8YH1DP2A3qxsQTlyAgFUzAdkZA2YTF/CAtXX9gMxumABLWkdcgIAVMwG7EwJcYRPSMjxgdU0/IJ1BQG9E1LSsCgQsmwhIZTL8n6k+ZJ7gM3+srBoISP/nAXjEjX/2L/i+vGIgIJXmT4nxoBXPKvG4D0/M8NAJjz0Anh7gBhz3sLgNxJ0UbkawnseSGKtKLMywtsHyAL+w+JHCdR6XSlxt8IXFnMeoA8gbCVhsi23StrT0Fx+aZnks0HtQAAAAAElFTkSuQmCC" InformativeScreenshot="17579d8e005e9b89879534add7e5d500.png" Selector="&lt;html app='chrome.exe' title='Settings'/&gt;" Url="[&quot;chrome://settings/content/siteDetails?site=&quot; + in_S_Url]" />
+                                </uix:NApplicationCard.TargetApp>
+                              </uix:NApplicationCard>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: The Technology Company" sap:VirtualizedContainerService.HintSize="472.666666666667,629.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="WindowMessages" Version="V1">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Check Mobile Homepage" sap:VirtualizedContainerService.HintSize="376,411.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayMS="5" DisplayName="Send Hotkey - Refresh" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="&quot;R&quot;" KeyModifiers="Ctrl, Shift">
+                                        <ui:SendHotkey.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="451e8817-37d6-4737-a208-70852a70fe2b">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:SendHotkey.Target>
+                                      </ui:SendHotkey>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invokes the file that checks whether the website is currently on the mobile homepage" DisplayName="Invoke Check_Mobile_Homepage" sap:VirtualizedContainerService.HintSize="334,159.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Helper Processes\Check_Homepage_Mobile.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_B_Is_Homepage">[B_Is_Mobile]</OutArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:InvokeWorkflowFile>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADPSURBVDhPYwCBw0zSFw4zy/wnCTNJnwdrBgGsCojAUO2jBoAANkliMFQ7lQw4pWTx/5JjCJhGVwgSOyakBWafM3KDi0O1Qwx42Nj3/+XCVf/fbNjx/25hPVjhw4ZesEaQ3CWnULCmDweO4zYApujLhatgPgiDDQLSdwvqwC78cv4KYQN+PHj8/+nEOWCDrgUlQwwAugokDxLDaQDIFpCzQZpBTn06Yfb/H/cfoRiO0wvgQAQqggUSiA+yHSRGVCCSg6HagQaQl50vMDAwMAAARO/T/xnwzJQAAAAASUVORK5CYII=" InformativeScreenshot="121a8c52c499b31905e2c4f17c86c0b6.png" Selector="&lt;html app='chrome.exe' title='The Technology Company'/&gt;" Url="[in_S_Url]" />
+                                </uix:NApplicationCard.TargetApp>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                            <FlowStep.Next>
+                              <FlowDecision x:Name="__ReferenceID13" Condition="[B_Is_Mobile]" DisplayName="Is_Mobile" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10" True="{x:Reference __ReferenceID0}">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <av:Point x:Key="ShapeLocation">270.641666666667,804.666666666667</av:Point>
+                                    <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                    <av:PointCollection x:Key="FalseConnector">340.641666666667,848.166666666667 370.641666666667,848.166666666667 370.641666666667,838.333333333333 450,838.333333333333</av:PointCollection>
+                                    <av:PointCollection x:Key="TrueConnector">270.641666666667,848.166666666667 90.641666666667,848.166666666667 90.641666666667,1368.33333333333 250,1368.33333333333</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <FlowDecision.False>
+                                  <FlowStep x:Name="__ReferenceID11">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">450,805.333333333333</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">550,873.333333333333 550,903.333333333333 280.666666666667,903.333333333333 280.666666666667,956.666666666667</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence sap2010:Annotation.AnnotationText="Signs into the desktop version" DisplayName="Sign In Desktop" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type In User ID" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_12" Text="[in_S_Username]">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="S_URL_Invalid_UserID/Password" DesignTimeRectangle="579, 135, 168, 28" ElementType="InputBox" FriendlyName="'INPUT  input_userID'" FullSelectorArgument="&lt;webctrl id='input_userID' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input_userID' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAAgCAYAAACPQ5N7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVHhe7Zzfh+tAGIbP//8fDCGEkIsQQtiLZRlCLkoJofQilEOIVVoltRfvfjPJ9BxtD3u67erE+/DSzJemc/GYXyW/jscjGMaXUFjGq5yE3e/3qOsai8WCYZ4mxknj5oWwpvD+/g5CngnjpHHzQlhjMyHPiHGTwhJvoLDEKygs8QoKS7yCwhKvoLDEK24TdpVDqRi6n65PrJArhfiycGd66FhB5avxSsfSH7k+JUCUFqjana2T+TAjYXP59Ylhi1anCFWIdPnovpCfZJ7CTnS2PUG1nRqI9zxU2MNGI4sCBGGIIAiRFA36D1syRegsknapS6JMY3OYar1GrCIUukAcKExe/sXXhMVQI5P+JBWXBnPhgcK2eBHZ0qWzcIe1rrCxn3uUIlyYN9Jq2KHJQ6ikgh0MrbBSz5boBnvDGV8U1t1XrKdr4jsPFPY33iKRLtVo+wPcwGpZF/L9s6l6VyFxz7TCXnu+4z+FvRyiiac8UFhh16IqUkQy0iqZ4tPXxo6go2DKLhXCUwLbZt26l7BcEsyO24TdlnbKTs53M+sXBNJ+bQYeuhKpk8cKn6EepuI5dxKWm675cZuwGGRWlzWnSPXW7ux0P3RLZKFIFJeik6FDmeVYul3WxxqFjLTjaCfrW7n3zxpWyn0DXXfjxXeFPR1rye+V0zPJLLhRWMMWzaub7k0CJLlsqtweCwdsqhyJOQWwpwRSL8YlgUWWC+6UIDT3RBm0O+i/SVjXj7EvYZLzj4MZ8g1hCfl5KCzxCgpLvILCEq+gsMQrKCzxCgpLvOKqsHyRBnlG/vkiDb6qiHnGGCevvqqIYXwIhWU8yhGf+cPiGV2TmM8AAAAASUVORK5CYII=" InformativeScreenshot="6ffc0d12d9782a1de31836274aab47b0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='' /&gt;" SearchSteps="FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="460, 121, 68, 80" ElementType="Icon" FriendlyName="'IMG  headerlogo'" FullSelectorArgument="&lt;webctrl parentid='logo' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='logo' tag='IMG' type='' aaname='Home Page' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type In Password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_13" IsPassword="True" SecureText="[in_SS_Password]">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="S_URL" DesignTimeRectangle="755, 135, 168, 28" ElementType="InputBoxPassword" FriendlyName="'INPUT  input_pass'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAAgCAYAAACPQ5N7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANeSURBVHhe7Zzfh+tAFMfv//8fhCGEMA9hCKEPIYSSh6WEUPIQSiixSlZI9eF7z/xIt73bve7du3UznA+HyWQyk+inJyd5yI/z+QwODl+CheXwKq7Cvr29oa5rvLy8cHCsJrST2s0Pwuodr6+vYJg1oZ3Ubn4QVtvMMGtEu8nCMt7AwjJewcIyXsHCMl7BwjJewcIyXvFFYfdIgwDBXQhEqkJ/cUO8xl5funebzGr4J2HjcnDbwNxvIUUAsWldj8+wsGvl24TV9EVImTaD/8qysGvlacKemgwxZdylXIjzFpMdhulQQkUCIgwhRAiZNRhMKXFCk0nqEwgpRKRQdiMtl9IcEhU1DWMFSfPK9w5UktZxho1tgSRa1o6QFC2NsAxljCDKUGYxRJDSlRDTAaWKbs51g4TaLOz6+DZhL8MOSpcE9CvPc01tiULLRoxdjvgqQIcNjUt2i74j2rLCQbcqiSDMTVtz6Xco9ydq2fVUPZt+M07LJSsrol5vmb/bICTp5LaH/g8s5xVuOj3SChuEULsj7GwnK3tcwJ7uiK7QY1jYNfJPwtqMtMTvHroGlPEieI+Csl+YlOiGyUi1MNeK5omQNUdM1ibHjFrRGsYg25Z5TllWwThsMrBt71MaRyJrzRdORnCbTY2wcUln5BhK+jMJ3Jfe9vpY2PXxbRn2Hn1r17dcurWHESKZQIY348cOVZYgMiUD3bLzxgl2wdAUUFJQP2XrOEV1sJnYykzSTTqbxigH+ydQ9WQlVTWpbPuW0uCKEVof80DYm33vsLBr5SnCGrlEima561865LfC3jAft6ZefK9HHZcR+w3VlWJDRQRh6laBNKO5nXBGPpUhJfGX4/86w/aFKSE4w/rBU4Q1Neanwh6xVSl29imL9rXInHDTPoMquusD0mmr53HCUq+pNWndqOhNj5Ytou27B7I/qWFvhaXWVmflaw07o68SmoOFXSNPEVaXBHUa2af9DyXBhEOVQuq3AOYtAcmVuZLg1CBPluPcWwJXEmhspgyx+GrqYZr314w6dvothJX74VuCO2GJsUXuyhB+S7Buvigsw/wfWFjGK1hYxitYWMYrWFjGK1hYxitYWMYrHgrLH9Jg1sinH9LgTxVxrDG0kw8/VcTB4UOwsBwexRk/Ac6OoiIT8V6uAAAAAElFTkSuQmCC" InformativeScreenshot="4a7a95dea2d0799ac0c099c2aaa9f2d3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Technology Company' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ClickType="Single" DelayAfter="3" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="S_URL" DesignTimeRectangle="931, 134, 64, 30" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Log In' check:text='Log In' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAiCAYAAADmvn/1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGmSURBVGhD7ZlBTsJAFIa9jGs3bhCvwFE4gDtXrNhpgAN4AuKGmLgzYeEGQ2MTFqMkjUINhmKwI21+ZwrF8toYKqGp6Vt8TTr/66Tvy3TapAdSSjA/sBDCWsjT2wynLQOH9V6h0D0LexYXUm4aOLp8xHFrUCh0z2UlJSZE20q6oAjo3llIBBZCYCEEFkJgIQQWQmAhBBZCYCGEvQlpTwBMponZbkwh1NTCTMp2h4UQMhdS7c1hLVS28NXBgxiMUAkygdpAwlGjOnPdL9iqLt54RMjdXNV7sB0PbjCfr8YtUp+ObIXcfsCO3HQlaMiH2ROr5iLZjQMrbDw6R4KQh+5zkJ0PlUF3jtpGfToyFXK2uuH6ekygo5eE/Z6QjXHvbiNEoh1mpiRzpCc3QmqWVzwhvz4y3U+4f3pk/pMQ1aDe7EJMY7tNNajfelP9J0LSY+HCsFENz69naoX4asOM1uyf/Ai5GqEzWb4+l3iwhuPV6smOHK2QfMBCCCyEwEIILITAQgiJQor8K/Ok2Y8LMV8dlBr9wFaRKDUMmC/q25cKYZawkA0kvgFK61Kx/RKU/QAAAABJRU5ErkJggg==" InformativeScreenshot="f4256d6542b646e98f2dde35252c5853.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Technology Company' /&gt;" SearchSteps="FuzzySelector, Image" Text="Log In" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='submit' /&gt;" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <ui:UiElementExists sap2010:Annotation.AnnotationText="Two types of security questions to check for. One for the mobile version of security and one for the desktop version" DisplayName="Check Security Question (Mobile)" Exists="[B_Security_Q_Mobile]" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="UiElementExists_45">
+                                        <ui:UiElementExists.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="984a86bb-fc48-4976-a9bf-e5dd9f2f76d5" InformativeScreenshot="ff573ee31e550254a75c3c175881f805" Selector="&lt;html app='chrome.exe' omit:title='Company Name' /&gt;&lt;webctrl aria-role='alert' tag='DIV' innertext=' Login Security Question *' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:UiElementExists.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:UiElementExists>
+                                    </Sequence>
+                                    <FlowStep.Next>
+                                      <FlowDecision x:Name="__ReferenceID5" Condition="[B_Security_Q_Mobile]" DisplayName="Security_Q_Mobile" sap:VirtualizedContainerService.HintSize="104,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <av:Point x:Key="ShapeLocation">228.666666666667,956.666666666667</av:Point>
+                                            <av:Size x:Key="ShapeSize">104,87</av:Size>
+                                            <av:PointCollection x:Key="TrueConnector">228.666666666667,1000.16666666667 80,1000.16666666667 80,1108.33333333333 110,1108.33333333333</av:PointCollection>
+                                            <av:PointCollection x:Key="FalseConnector">332.666666666667,1000.16666666667 362.666666666667,1000.16666666667 362.666666666667,1018.33333333333 440,1018.33333333333</av:PointCollection>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <FlowDecision.True>
+                                          <FlowStep x:Name="__ReferenceID10">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">110,1075.33333333333</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">210,1143.33333333333 210,1249.66666666667 260,1249.66666666667</av:PointCollection>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Sequence sap2010:Annotation.AnnotationText="If a mobile security question appears, then clicking return to login is sufficient for going to the mobile website" DisplayName="Click Return to Login" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:LogMessage DisplayName="Log Message - Mobile Security" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Trace" Message="[&quot;Mobile Security Question&quot;]" />
+                                              <uix:NClick sap2010:Annotation.AnnotationText="Return to Login from the mobile security question goes to the mobile app" ClickType="Single" DisplayName="Click Return to Login" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="S_URL_LoginChallengeValidation" DesignTimeRectangle="688, 758, 269, 26" ElementType="Text" FriendlyName="'Click here'" FullSelectorArgument="&lt;webctrl aaname='Click here to return to login page.' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Click here *' tag='A' type='' check:text='Click here *' /&gt;" ImageBase64="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" InformativeScreenshot="c493eec36c2c4afdee28644f4b442cf9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Company Name' /&gt;" SearchSteps="FuzzySelector, Image" Text="Click here to return to login page." TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="691, 547, 560, 46" ElementType="InputBoxPassword" FriendlyName="'INPUT  securityAnswer'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NClick>
+                                            </Sequence>
+                                            <FlowStep.Next>
+                                              <x:Reference>__ReferenceID1</x:Reference>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowDecision.True>
+                                        <FlowDecision.False>
+                                          <FlowStep x:Name="__ReferenceID6">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">440,985.333333333333</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">540,1053.33333333333 540,1083.33333333333 360,1083.33333333333 360,1223.66666666667</av:PointCollection>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Sequence sap2010:Annotation.AnnotationText="If a security question appears, then answer it with the argument" DisplayName="Security and Logout" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:Boolean" Name="B_Dev_Tools_Open" />
+                                                <Variable x:TypeArguments="x:Boolean" Name="B_Security_Q" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:UiElementExists DisplayName="Element Exists - Desktop Security " Exists="[B_Security_Q]" sap:VirtualizedContainerService.HintSize="522,106" sap2010:WorkflowViewState.IdRef="UiElementExists_46">
+                                                <ui:UiElementExists.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3c8d8a7-080c-49c8-a7b2-db2db04715ff" InformativeScreenshot="d24b8093b54db725c7e26f52fd631b43" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='Google Chrome' /&gt;&lt;ctrl name='Company Name' role='document' /&gt;&lt;ctrl name='Login Security Question' role='grouping' /&gt;">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:UiElementExists.Target>
+                                              </ui:UiElementExists>
+                                              <If Condition="[B_Security_Q]" DisplayName="If Desktop Security Question" sap:VirtualizedContainerService.HintSize="522,756.666666666667" sap2010:WorkflowViewState.IdRef="If_24">
+                                                <If.Then>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="376,602.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:LogMessage DisplayName="Log Message - Mobile Security" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Trace" Message="[&quot;Desktop Security Question&quot;]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into - Security Answer" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_14" IsPassword="True" SecureText="[in_SS_Security]">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable Accuracy="0.47" BrowserURL="S_URL" DesignTimeRectangle="240, 605, 573, 42" ElementType="InputBoxPassword" FriendlyName="'INPUT  input_pass'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAAgCAYAAACPQ5N7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANeSURBVHhe7Zzfh+tAFMfv//8fhCGEMA9hCKEPIYSSh6WEUPIQSiixSlZI9eF7z/xIt73bve7du3UznA+HyWQyk+inJyd5yI/z+QwODl+CheXwKq7Cvr29oa5rvLy8cHCsJrST2s0Pwuodr6+vYJg1oZ3Ubn4QVtvMMGtEu8nCMt7AwjJewcIyXsHCMl7BwjJewcIyXvFFYfdIgwDBXQhEqkJ/cUO8xl5funebzGr4J2HjcnDbwNxvIUUAsWldj8+wsGvl24TV9EVImTaD/8qysGvlacKemgwxZdylXIjzFpMdhulQQkUCIgwhRAiZNRhMKXFCk0nqEwgpRKRQdiMtl9IcEhU1DWMFSfPK9w5UktZxho1tgSRa1o6QFC2NsAxljCDKUGYxRJDSlRDTAaWKbs51g4TaLOz6+DZhL8MOSpcE9CvPc01tiULLRoxdjvgqQIcNjUt2i74j2rLCQbcqiSDMTVtz6Xco9ydq2fVUPZt+M07LJSsrol5vmb/bICTp5LaH/g8s5xVuOj3SChuEULsj7GwnK3tcwJ7uiK7QY1jYNfJPwtqMtMTvHroGlPEieI+Csl+YlOiGyUi1MNeK5omQNUdM1ibHjFrRGsYg25Z5TllWwThsMrBt71MaRyJrzRdORnCbTY2wcUln5BhK+jMJ3Jfe9vpY2PXxbRn2Hn1r17dcurWHESKZQIY348cOVZYgMiUD3bLzxgl2wdAUUFJQP2XrOEV1sJnYykzSTTqbxigH+ydQ9WQlVTWpbPuW0uCKEVof80DYm33vsLBr5SnCGrlEima561865LfC3jAft6ZefK9HHZcR+w3VlWJDRQRh6laBNKO5nXBGPpUhJfGX4/86w/aFKSE4w/rBU4Q1Neanwh6xVSl29imL9rXInHDTPoMquusD0mmr53HCUq+pNWndqOhNj5Ytou27B7I/qWFvhaXWVmflaw07o68SmoOFXSNPEVaXBHUa2af9DyXBhEOVQuq3AOYtAcmVuZLg1CBPluPcWwJXEmhspgyx+GrqYZr314w6dvothJX74VuCO2GJsUXuyhB+S7Buvigsw/wfWFjGK1hYxitYWMYrWFjGK1hYxitYWMYrHgrLH9Jg1sinH9LgTxVxrDG0kw8/VcTB4UOwsBwexRk/Ac6OoiIT8V6uAAAAAElFTkSuQmCC" InformativeScreenshot="b70e35fe73e03c20188faeed608fb2d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Company Name - The Technology Company' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="240, 662, 123, 51" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Continue' check:text='Continue' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAA3CAYAAAAltpUSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUcSURBVHhe7ZxNa9xGGID7Z3oulLQQKIQWSk/bEig99NT2kFtPOfnQkrTg096cOiaFGFJ3LzaFNe7Hdh2HPSzkYAK7pLUcpSviWrUdwa6j/bAceXk7I81oR9rR2utdK5HmfeE5eDQajeYZzYfW6A3AUDZQvsKB8hUOqfzVv5vwxfI/8O4Pj+HNfA1JKdTfl8Tjr1stZjYcQ/K/Lf8LnxWewgd3dXh7/glcWtCRlEL9vU88fvrzU/ju/i4zPIiQfCr+yh1NWhCSbq78qMHN9XAHCOTTof7qkvxEJBt88pMemgIC+XSOvzSPT32mua3BVysNZlyQ/86txzjHZxzqly4CeQTy6epQdgKSLahnHihfMVC+wqB8hUH5CoPyFQblKwzKVxiUrzAoX2FQvsKgfIV5BfINmKl1wOiegMOu54V7Aua+DbOJ/pR8AFW7D477Eh5sCOlLLai7tFIkvSykZ4xk5S9bUO322VUAHMcFo3lMcMFmaaQXwOajXfn5U+c5bHo98AQ2K0J60QbTqwtJfyikZ4zk5C/xhibRPYKVjWeR43tQMF02GrjhJ/HCiJFPyBX/g5m1SB0zRkLyDShY7Inv9iAfO7QbkG/0oFSJNvozmNUdsJzwqKHpB5AL5dNhtekfNzQT5hr0HP9vGrbdg8Winy9vnrBUMXgneAGG9/cxrPKyqz1/dHJI/SuHsNkUpi0yZRnaflCHcD0GaT4jOly5BVWxXBJ2swOFtXC+aZGMfGEYrT8y5HliMUlDMukuEb5jQ2mHSPXmZOKi+QKuCfl5o3tBpZhtKJEOZfIW7bZhhuS7Vj2Ekk7WHl45fTBoufoh5L3OMUI+C7vrQFW3oUoq4hfdB602XI+zys9VO+ye+mBZHVIXoWyyJildwNojGfnasV+wewRzsuMjuLHDLEdHDGEasRp7QXogn+SfWxbyr7XB8g6QhvyFp8c9haPkk46i7wkjzmBUc/Ytljau/EFavRYe9XL8uqzTiscmJRH5wRBLnlLZ8XiEhpItvB4e+U8GGYpnWdp5G/3M8oVrBfDOLdzfWPWoeQngWK2haYx2rhWv10brODmvt/xi258uXAcKsuMLTbYlG0hKo3zePoYmnxJz+kt2fPjYJCQi/9zD/qgG9xhuyDTK53lPC9s8iJQ1GcnIDxZ8faiPs28e58ln64E0yl/c99cMJlm7zJTjuV4cd7E8mmTki1s90nh5aR4K3+rxmxQa6pQ5n5eZRvk5fj6Z88N5L5aE5BPElzzOERTK0V5sSl/yBKv9aKcJrfYHe+xzy6+KeSeXz59mcQdAO/fMX45fjliPpRZobJtnaNG3m/QcsvUL1W86JCefcsbXu/WaKZx3+j7/a+Ea48k3gvyO3fNesBjaDkmfXH6OrOD9vsn37R3QhHsP10PY0pGwmz14QPb59P2Ewc6h93md5Z0Wycr3kP+w4/AfdsS9eUD8G77PI3nHk08avdIGI6gIqUPjOUmfXD69z1n9GGzWSWknoC+GShVLWg+K7A1f3H1Og1cgH3ldQPkKg/IVBuUrDMpXGJSvMChfYVC+wqB8hUH5CoPyFQblKwzKVxipfPwOX/aJ/Q6f9wXO2/gFzkwzH/MFTvpN1o/vSU5AMkPu3hP4Y1vy7V0aN9Z34fLClvREJN28d2cLvt/w/6WWR0g+jW/+3IWPFrfhrVsargFSDvVHPX54dxturofF0xiST+M3reWtAegikK4OkXRC/VGPvwtDvRhS+RgqBMD/92FKMJoF+ioAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Continue" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='submit' /&gt;" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="5" DisplayName="Click Continue" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                      <ui:Click.CursorPosition>
+                                                        <ui:CursorPosition Position="Center">
+                                                          <ui:CursorPosition.OffsetX>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:CursorPosition.OffsetX>
+                                                          <ui:CursorPosition.OffsetY>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:CursorPosition.OffsetY>
+                                                        </ui:CursorPosition>
+                                                      </ui:Click.CursorPosition>
+                                                      <ui:Click.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40d0cfca-4ef2-480d-b97d-5b08d2648cf7" InformativeScreenshot="732e15532b88705c1cf52644a6c2de60" Selector="&lt;html app='chrome.exe' title='Company Name Distributing' /&gt;&#xA;&lt;webctrl tag='BUTTON' type='submit' /&gt;&#xA;">
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                          <ui:Target.WaitForReady>
+                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                          </ui:Target.WaitForReady>
+                                                        </ui:Target>
+                                                      </ui:Click.Target>
+                                                    </ui:Click>
+                                                  </Sequence>
+                                                </If.Then>
+                                              </If>
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Logout' " sap:VirtualizedContainerService.HintSize="522,168" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="S_URL" DesignTimeRectangle="1418, 115, 36, 13" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl id='fixedLogoutText' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fixedLogoutText' tag='SPAN' type='' aaname=' Logout' check:text='Logout' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAARCAYAAACvi+4IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKbSURBVEhL7VTdS1NxGD5/ihYR5MUSApWI8MKuZGDQhSF4EwWDpEAhWaDNwmZLk+WmDlczxYHfKeK0UBMVtVZ+lCDqppK2L+e+tQlP532tA+puVg520cXDOb/nfc77Pr/3vL+fkJIiQzJDSEm9iGSGkHomHckM4ey5S0hmCOcvZOE46nRGBEMh6OpfnYglGvWNJjzTvJTWwqOK50iTXT0CfYMJoVBYFDefiCUaKys2TM9YpbXg3fWhvEKD9IwcCY1Nb9igwdh6hNeLuyN9OBxBJBJBV88ALmfL8UJrgNe7i8jeHvz+AMff9ls4NvphirUEp8uDJ+pa3FaUwOF0sYbydvcOcGxu4RuiBwfY3/+J8Ylpjgk+nx9PNXXIuJIroel1G0LhMIwms8TdKy6D272DkbFJ5F4vRKu5mzdBT/v6JuYXlphXi7kCgSD6B97B1NIOn2hYJ/6R7Gs38GX+K7a2Haiq1sPpdLOGcvf2WeBye3D3/kOs2dbx8dOcVFdQKitO3D21tQ0IBkPQahslrrq6Djs7XpSWqnhdUHAHDocTi4tLbFyvNzKfn38L26KJjo5ejImbWV21ITMzh2OUjzrc1tYpaYg3m7s4F+VcXl7B5OQM84SYF3W8Bj2eJDBYWKiAy+XG4OB7pKVlwWBoFov5YTS2sAmrdY55pfIx81ScTNN7ZWUNx2ZnP2Nz8zvKy9XY2voBi+Uw14Q4b3EbpEGlwaZ5IgwPj6KmRnd4GH7z7e093B0yQN3dEw8JxWk2ySAVp+9ITweHuqZSVXGNoaERrkFap3hg/hgk09FoFGtrdsjlN2MbjBclJWVQKIr5vajogdhpD3f4uO5vcCoGOzv7uHN2+wabGx+fQl5eQUxtvDgVg4nEf4P/Bhl+AQK3QCSkG+W6AAAAAElFTkSuQmCC" InformativeScreenshot="34429e999c4a1a92a608336c06cc2d6b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Company Name Home page' /&gt;" SearchSteps="FuzzySelector, Image" Text="Logout" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <ui:LogMessage sap2010:Annotation.AnnotationText="If Logout doesn't throw error it means that Login was successful" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="522,140" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Trace" Message="[&quot;Log in Successful&quot;]">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:LogMessage>
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Logout' Verification" sap:VirtualizedContainerService.HintSize="522,168" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="S_URL_Logout" DesignTimeRectangle="470, 385, 66, 33" ElementType="Button" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Logout' check:text='Logout' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAlCAYAAAD/Tp9wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIuSURBVGhD7Zqhk7JAHIbvf9pEspEu0TbZTKRrly7RSP4DpmukTTaSjcQ4I18iYaERFC3vtz9uQbhx8XC8Ow/3cXacFVZ5H36sOuwTDGcxYjR0xByPR2y3W6zXa0RRNPpGOSkv5f5MI+ZwOGCz2SDLMuz3e/XquKGclJdyU/42jRjagdojci57I4bKarfbqd5jQbkpf5tGDF1zj8zn/EaMwojRYMRoMGI0GDEajBgNNxWTCxeM+YhV/7cp4gDzIEah+kMYtZjqeFyBXPWH8HNi8giLFweOw2WbwhMpSrVJ/gjHyndhT2xwPoM398CZC1En6hkb+wzMP31iLeNf+AZuW2AWvecbwoF2fkZMGWPuWHCF+v9RRPCpv/w42vTdAXPkuCptiTRwYdViLozViaGtd18x5coDe14gUX2iWL6A8QCpfASc4TVszQS5gKvE9I/942LOHmDsq31j+Iyhla0jpn/sCCum2ncm5OwyvGJOY/+4mEvzRLK4fo5JFs9V+I+tGYQrJ9y2mEpg2Zrov8Y3iJFnsNOUqAvfSqE3vepbCVkIbzqBZXPwmYe5x09Vki/xak8wkePe2yX3BW4q5mryBEktQVLIy8eyPERDT/MNuQ8x2Qq+KyuCy7PuyGd55kX6i1Yk9yHmDjFiNBgxGowYDUaMBiNGgxGjQSvG3InU3Ik096672Rsx9WoHWhbxSKsdKG/vageC1omQOSoruubG3ign5e1dH2PoYsScBfgP79vipTnK1QsAAAAASUVORK5CYII=" InformativeScreenshot="2d5fdb6b3c04d8b708ade2ada712d4ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Company Name Distributing' /&gt;" SearchSteps="FuzzySelector, Image" Text="Logout" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" />
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                            </Sequence>
+                                            <FlowStep.Next>
+                                              <x:Reference>__ReferenceID1</x:Reference>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowDecision.False>
+                                      </FlowDecision>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowDecision.False>
+                              </FlowDecision>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                </FlowStep.Next>
+              </FlowStep>
+              <FlowDecision x:Name="__ReferenceID7" Condition="[B_Is_Desktop_Version]" DisplayName="is_Desktop_Version" sap:VirtualizedContainerService.HintSize="107,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12" True="{x:Reference __ReferenceID2}">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">250.666666666667,396.666666666667</av:Point>
+                    <av:Size x:Key="ShapeSize">107,87</av:Size>
+                    <av:PointCollection x:Key="TrueConnector">250.666666666667,440 100,440 100,456</av:PointCollection>
+                    <av:PointCollection x:Key="FalseConnector">357.666666666667,440.166666666667 387.666666666667,440.166666666667 387.666666666667,439.666666666667 430,439.666666666667</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <FlowDecision.False>
+                  <FlowStep x:Name="__ReferenceID8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">430,413.666666666667</av:Point>
+                        <av:Size x:Key="ShapeSize">200,52</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">630,440 660,440 660,1250 460,1250</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message - Not Desktop" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Trace" Message="[&quot;Is Not Desktop Version&quot;]" />
+                    <FlowStep.Next>
+                      <x:Reference>__ReferenceID1</x:Reference>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowDecision.False>
+              </FlowDecision>
+              <x:Reference>__ReferenceID0</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <FlowStep x:Name="__ReferenceID14">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">460,285.333333333333</av:Point>
+                    <av:Size x:Key="ShapeSize">200,68</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">560,353.333333333333 560,383.333333333333 304.166666666667,383.333333333333 304.166666666667,396.666666666667</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Checks whether the website is currently on the desktop version" DisplayName="Check if Desktop Version" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="B_Is_Incognito" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Element Exists - Incognito" Exists="[B_Is_Incognito]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_57">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0a0b270c-4f62-4c86-a5e7-e06ed9949a31" InformativeScreenshot="f19daea443dee809fbc6cc16dfe79b4b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='Company Name * - Google Chrome' idx='*' /&gt;&lt;ctrl name='* - Google Chrome (Incognito)' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Incognito*' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[B_Is_Incognito]" DisplayName="If Incognito" sap:VirtualizedContainerService.HintSize="484,271.333333333333" sap2010:WorkflowViewState.IdRef="If_32">
+                    <If.Then>
+                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_18" Key="&quot;W&quot;" KeyModifiers="Ctrl, Shift">
+                        <ui:SendHotkey.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ed850eac-551f-464c-b839-726169cb53a2">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SendHotkey.Target>
+                      </ui:SendHotkey>
+                    </If.Then>
+                  </If>
+                  <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="484,300.666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="[in_S_Url]">
+                    <ui:OpenBrowser.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:UiElementExists DisplayName="Element Exists - User ID" Exists="[B_Is_Desktop_Version]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_35">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f83f8fea-ff58-43a4-ac32-8e906b2c5e89" InformativeScreenshot="92a47a434ce762a3b50c3d985999a1b1" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='Company Name Distributing - Google Chrome' /&gt;&lt;ctrl name='Company Name Distributing' role='document' /&gt;&lt;ctrl name='User ID' role='editable text' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:OpenBrowser.Body>
+                  </ui:OpenBrowser>
+                </Sequence>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID7</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+              <x:Reference>__ReferenceID8</x:Reference>
+              <x:Reference>__ReferenceID9</x:Reference>
+              <x:Reference>__ReferenceID10</x:Reference>
+              <x:Reference>__ReferenceID11</x:Reference>
+              <x:Reference>__ReferenceID12</x:Reference>
+              <x:Reference>__ReferenceID13</x:Reference>
+              <FlowDecision x:Name="__ReferenceID15" Condition="[B_Is_Mobile]" DisplayName="Is_Mobile" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_13" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID14}">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">275,206.666666666667</av:Point>
+                    <av:Size x:Key="ShapeSize">70,87</av:Size>
+                    <av:PointCollection x:Key="FalseConnector">345,250.166666666667 375,250.166666666667 375,318.333333333333 460,318.333333333333</av:PointCollection>
+                    <av:PointCollection x:Key="TrueConnector">275,250.166666666667 0,250.166666666667 0,1368.33333333333 250,1368.33333333333</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </FlowDecision>
+              <FlowStep x:Name="__ReferenceID16">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">450,103.666666666667</av:Point>
+                    <av:Size x:Key="ShapeSize">200,52</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">550,154.666666666667 550,184.666666666667 310,184.666666666667 310,206.666666666667</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invokes the file that checks whether the website is currently on the mobile homepage" DisplayName="Invoke Check_Mobile_Homepage" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Helper Processes\Check_Homepage_Mobile.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <OutArgument x:TypeArguments="x:Boolean" x:Key="out_B_Is_Homepage">[B_Is_Mobile]</OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID15</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+              <x:Reference>__ReferenceID1</x:Reference>
+              <FlowDecision x:Name="__ReferenceID17" Condition="[B_Started_Mobile]" DisplayName="B_Started_Mobile" sap:VirtualizedContainerService.HintSize="98,87" sap2010:WorkflowViewState.IdRef="FlowDecision_14" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID16}">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">22,86.6666666666667</av:Point>
+                    <av:Size x:Key="ShapeSize">98,87</av:Size>
+                    <av:PointCollection x:Key="FalseConnector">119,130.166666666667 149,130.166666666667 149,129.166666666667 450,129.166666666667</av:PointCollection>
+                    <av:PointCollection x:Key="TrueConnector">22,130 -8,130 -8,1369.33333333333 250,1369.33333333333</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </FlowDecision>
+            </Flowchart>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" IconBase64="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" InformativeScreenshot="5a440d7c7847bbdcf4bfbff7f935c520.png" Selector="&lt;html app='chrome.exe' title='Company Name - The Technology Company'/&gt;" Url="[in_S_Url]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
