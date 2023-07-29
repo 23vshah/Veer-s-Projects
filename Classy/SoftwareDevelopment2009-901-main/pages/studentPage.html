@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student | Classy</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-Raleway">
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl italic">Classy</a>
+      </div>
+      <div class="flex-none">
+        <div>STUDENT PAGE</div>
+      </div>
+
+      <div class="flex-none">
+        <a href="index.html" class="btn btn-ghost normal-case">Logout</a>
+      </div>
+    </div>
+
+    <div class="flex justify-left p-3 md:p-5 gap-4">
+      <label for="studentProfileModal" class="btn border-none bg-secondary align-middle text-4xl">
+        <i class="bi bi-person-vcard-fill m-3"></i>
+        My Profile
+      </label>
+      <label for="studentSupervisorModal" class="btn border-none bg-secondary align-middle text-4xl">
+        <i class="bi bi-person-badge m-3"></i>
+        My Supervisors
+      </label>
+    </div>
+
+    <input type="checkbox" id="studentProfileModal" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box w-11/12 h-auto max-w-5xl bg-primary text-secondary-content">
+        <label for="studentProfileModal" class="btn btn-sm btn-circle absolute right-2 top-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-x-lg"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </label>
+        <h3 class="text-4xl font-bold">My Profile:</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 text-xl">
+          <div class="avatar col-span-1">
+            <div class="rounded-full">
+              <img id="avatar" alt="avatar" />
+            </div>
+          </div>
+          <div id="profile" class="col-span-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="studentSupervisorModal" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box w-11/12 h-auto max-w-5xl bg-primary text-secondary-content">
+        <label for="studentSupervisorModal" class="btn btn-sm btn-circle absolute right-2 top-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-x-lg"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </label>
+        <h3 class="text-4xl font-bold">My Supervisors:</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 text-xl">
+          <div class="col-span-1">
+            <h2 class="card-title">Grade Principal</h2>
+            <p id="grade_principal"></p>
+          </div>
+          <div class="col-span-1">
+            <h2 class="card-title">Counselor</h2>
+            <p id="counselor"></p>
+          </div>
+          <div class="col-span-1">
+            <h2 class="card-title">Homeroom Teacher</h2>
+            <p id="homeroom_teacher"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">My Portfolio</h2>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <iframe id="portfolio" src="" width="100%" height="500px"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">My Schedule</h2>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <iframe id="schedule" src="" width="100%" height="500px"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">My Grades</h2>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <ul id="courses"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../js/displayStudent.js"></script>
+  <script src="../js/displaySupervisor.js"></script>
+  <script src="../js/displayStudentCourse.js"></script>
+  <script>
+    // get user data from local storage
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    // set user data to html
+    const profile = document.getElementById("profile");
+    profile.innerHTML = displayStudent(user);
+    document.getElementById("portfolio").src =
+      "data:application/pdf;base64," + user.portfolio + "#toolbar=0&navpanes=0&scrollbar=0";
+    document.getElementById("schedule").src =
+      "data:application/pdf;base64," + user.schedule + "#toolbar=0&navpanes=0&scrollbar=0";
+    document.getElementById("avatar").src = "data:image/png;base64," + user.avatar;
+
+    // set supervisor data to html
+    document.getElementById("grade_principal").innerHTML = displaySupervisor(user.grade_principal);
+    document.getElementById("counselor").innerHTML = displaySupervisor(user.counselor);
+    document.getElementById("homeroom_teacher").innerHTML = displaySupervisor(user.homeroom_teacher);
+
+    // make li for each course, append to ul
+    const courses_list = document.getElementById("courses");
+    user.courses.forEach((course) => {
+      const li = document.createElement("li");
+
+      // course has course_name, student_grades, student_ids, students
+      li.innerHTML = displayStudentCourse(user, course);
+      courses_list.appendChild(li);
+    });
+  </script>
+</html>

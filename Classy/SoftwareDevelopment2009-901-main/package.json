@@ -1,0 +1,34 @@
+{
+  "name": "softwaredevelopment2009-901",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sthirunavukkarasu7450/SoftwareDevelopment2009-901.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sthirunavukkarasu7450/SoftwareDevelopment2009-901/issues"
+  },
+  "homepage": "https://github.com/Sthirunavukkarasu7450/SoftwareDevelopment2009-901#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.8",
+    "electron": "^21.3.1",
+    "electron-rebuild": "^3.2.9",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.3",
+    "daisyui": "^2.42.1",
+    "pg": "^8.8.0"
+  }
+}
