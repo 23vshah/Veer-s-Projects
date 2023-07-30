@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://demo.themesberg.com/pixel-pro/css/pixel.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="./node_modules/hover.css/css/hover-min.css" rel="stylesheet">
+    <title>Euphonium</title>
+    <link rel="icon" href="music-note-list.svg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md sticky-top bg-white">
+        <div class="container-xxl">
+            <a href="index.html" class="navbar-brand">
+                <span class="fw-bold text-primary full-brand hover">
+                    Society for Musical Advancement
+                </span>
+                <span class="fw-bold text-primary shrunk-brand hover">
+                    SFMA
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="text-primary bi-chevron-compact-down"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item ">
+                        <a class="nav-link hover text-primary  text-decoration-none  home-in-drop" href="index.html ">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link hover text-primary  text-decoration-none  text-decoration-none" href="eventDates.html ">Event Dates</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link hover text-primary  text-decoration-none  text-decoration-none dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Instrument Programs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a class="text-decoration-none lead" href="windprog.html">
+                                            <h1 class="dropdown-header">Wind Instrument Programs</h1>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <a class="text-decoration-none lead" href="brassprog.html">
+                                        <h1 class="dropdown-header text-decoration-none lead">Brass Instrument Programs</h1>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="text-decoration-none lead" href="percprog.html">
+                                            <h1 class="dropdown-header">Purcussion Programs</h1>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="text-decoration-none lead" href="theory.html">
+                                            <h1 class="dropdown-header">Music Theory</h1>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link hover text-primary  text-decoration-none" href="purchase.html ">Buy Programs</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link hover text-primary  text-decoration-none  text-decoration-none" href="contact.html ">Contact Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link hover text-primary  text-decoration-none  text-decoration-none" href="chapter.html ">Our Chapter</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link hover text-primary  text-decoration-none  text-decoration-none" href="sources.html ">Sources</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="gradient-gold-top pt-5 container-fluid m-auto">
+        <div class="row">
+            <div class="col-xl-2 col-md-1"></div>
+            <div class="col-xl-8 col-md-6">
+                <br>
+                <br>
+                <br>
+                <h1 class="display-1 text-center">
+                    Euphonium
+                </h1>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="col-xl-2 col-md-1"></div>
+        </div>
+    </div>
+
+    <div class="containter ">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col">
+                <blockquote class="blockquote  animate__animated animate__fadeInLeftBig bg-transparent">
+                    <h1 class="mb-0 display-3 text-center quote">
+                        The band is only as good as its euphonium section.
+                    </h1>
+                    <br>
+                    <footer class="blockquote-footer text-center"><cite title="Kalman Opperman">John Phillip Sousa</cite></footer>
+                </blockquote>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col text-center animate__animated animate__fadeInRightBig animate_slower"><img src="img/Euphonium/Euphonium.jpg" alt="clar.png" width="90%"></div>
+        </div>
+    </div>
+    <br>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("July 1, 2022").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("days").innerHTML = days + "d ";
+
+            document.getElementById("hours").innerHTML = hours + "h ";
+
+            document.getElementById("minutes").innerHTML = minutes + "m ";
+
+            document.getElementById("seconds").innerHTML = seconds + "s ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <div class="row bg-primary text-center p-3 p-md-4">
+        <div class="col"></div>
+        <div class="p-md-5 p-3 col fs-1 bg-primary-dark text-light rounded-pill" id="days" data-aos="fade-down" data-aos-duration="1500"></div>
+        <div class="col"></div>
+        <div class="p-md-5 p-3 col fs-1 bg-primary-dark text-light rounded-pill" id="hours" data-aos="fade-down" data-aos-duration="1500"></div>
+        <div class="col"></div>
+        <div class="p-md-5 p-3 col fs-1 bg-primary-dark text-light rounded-pill" id="minutes" data-aos="fade-down" data-aos-duration="1500"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="p-md-5 p-3 col fs-1 bg-primary-dark text-light rounded-pill no-seconds" id="seconds" data-aos="fade-down" data-aos-duration="1500"></div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col-12 p-xl-4 ">
+            <h1 class="display-2 text-center" data-aos="fade-down">Meet your Coordinators</h1>
+        </div>
+        <div class="col-md-9 fs-3 lh-lg lead gradient-gold-left p-3 p-md-5" data-aos="fade-right">
+            <p class="fs-3 lh-base">
+                <span class="display-4">Steven Mead</span> <br>Steven Mead (born 1962 in Bournemouth, England) is an English virtuoso euphonium soloist and teacher who has played an important role in achieving worldwide recognition of the instrument.
+                He has played solo concerti with many symphony orchestras, including: the Stuttgart Philharmonic Orchestra, the Trondheim Symphony Orchestra, Lahti Symphony Orchestra and Helsinki Philharmonic, Capella Cracoviensis, the Minneapolis Pops
+                Orchestra and the Japan Chamber Orchestra. He has premiered works by Martin Ellerby, Torstein Aagaard-Nilsen, Vladimir Cosma, Goff Richards, John Reeman, Rolf Rudin and Philip Sparke, amongst others. Goff Richards' Pilatus, Aagaard-Nilsen's
+                Concerto for Euphonium and Orchestra, Reeman's Sonata for Euphonium and Ellerby's Euphonium Concerto were all written expressly for Mead.
+            </p>
+        </div>
+        <div class="col-md-3 shadow-lg p-3 p-md-5" data-aos="fade-left"><img src="./img/Euphonium/Mead.jpg" alt="" width="359"></div>
+        <div class="col-md-3 shadow-lg p-3 p-md-5" data-aos="fade-right">
+            <img src="./img/Euphonium/Bowman.jpg" alt="" width="105%" class="pt-5"></div>
+        <div class="col-md-9 lead p-3 p-md-5" data-aos="fade-left">
+            <p class="fs-4 lh-lg gradient-gold-right">
+                <span class="display-4 ">Brian Bowman</span> <br> Bowman broke new ground in the American understanding of the euphonium and has been called "The most famous euphonium soloist in the world today". He became known for a "warm, velvet tone"
+                and promoted a style of playing described as "traditional vibrato... balanced by... clean and impressive technique, from-the-heart expressiveness, and a sense of calm assurance". He advanced this new image of the instrument through his
+                performances of new literature, premiering 4 of the 7 such works commissioned by the former Tubists Universal Brotherhood Association (TUBA) now known as the International Tuba Euphonium Association. He served as its president, and was
+                the first euphonium player to do so. Bowman has been involved in the evolution of the instrument. He has served as a consultant for the design of euphonium mouthpieces to the Swiss-based Willson Musical Instrument Company, whose products
+                are distributed in North America by Getzen. He has been instrumental in DEG Music Products, which released a line of mouthpieces bearing Bowman's name. Bowman has been on the music faculty at the University of North Texas College of Music
+                for twenty-two years (since August 1999), where he is a Regents Professor. He was head of the Brass Department at Duquesne University (1992–1999). Bowman has served on the faculty of seven other universities. He continues to perform as
+                a member of several ensembles and serves as a guest instructor and clinician frequently.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 text-center gradient-gold-left p-3 p-md-5" data-aos="fade-right">
+            <h1>The Euphonium</h1>
+            <p class="text-center fs-4 lh-lg ">
+                The euphonium is a medium-sized, 3 or 4-valve, often compensating, conical-bore, tenor-voiced brass instrument that derives its name from the Ancient Greek word εὔφωνος euphōnos,[1] meaning "well-sounding" or "sweet-voiced" (εὖ eu means "well" or "good"
+                and φωνή phōnē means "sound", hence "of good sound"). The euphonium is a valved instrument. Nearly all current models have piston valves, though some models with rotary valves do exist. The euphonium may be played in bass clef as a non-transposing
+                instrument or in treble clef as a transposing instrument. In British brass bands, it is typically treated as a treble-clef instrument, while in American band music, parts may be written in either treble clef or bass clef, or both.
+            </p>
+        </div>
+        <div class="col-md-2 p-3 p-md-5" data-aos="fade-left">
+            <figure class="figure ">
+                <img src="./img/Euphonium/Serpent.jpg " class="figure-img img-fluid rounded shadow-lg " alt="... ">
+                <figcaption class="figure-caption ">The Serpent is the oldest known ancestor of the Euphonium as well as other low brass instruments</figcaption>
+            </figure>
+        </div>
+        <div class="col-md-4 my-auto p-3 p-md-5" data-aos="fade-right">
+            <figure class="figure ">
+                <img src="./img/Euphonium/Marching.jpg " class="figure-img img-fluid rounded shadow-lg " alt="... " width="100%">
+                <figcaption class="figure-caption ">Pictured above is a marching style Euphonium</figcaption>
+            </figure>
+        </div>
+        <div class="col-md-8 text-center gradient-gold-right p-3 p-md-5" data-aos="fade-left">
+            <p class="text-center fs-6 lh-base ">
+                As a French Horn-voiced brass instrument, the euphonium traces its ancestry to the ophicleide and ultimately back to the serpent. The search for a satisfactory foundational wind instrument that could support massed sound above its pitch took many years.
+                While the serpent was used for over two centuries dating back to the late Renaissance, it was notoriously difficult to control its pitch and tone quality due to its disproportionately small open finger holes. The ophicleide, which was
+                used in bands and orchestras for a few decades in the early to mid-19th century, used a system of keys and was an improvement over the serpent but was still unreliable, especially in the high register. With the invention of the piston
+                valve system c. 1818, the construction of brass instruments with an even sound and facility of playing in all registers became possible. The euphonium is said to have been invented, as a "wide-bore, valved bugle of French Horn range",
+                by Ferdinand Sommer of Weimar in 1843, though Carl Moritz in 1838 and Adolphe Sax in 1843 have also been credited.[by whom?] While Sax's family of saxhorns were invented at about the same time and the bass saxhorn is very similar to a
+                euphonium, there are also differences—such as the bass saxhorn being narrower throughout the length of the instrument.[6] The "British-style" compensating euphonium was developed in 1874 by David Blaikley, of Boosey & Co,[7] and has been
+                in use in Britain since then, with the basic construction little changed. Modern-day euphonium makers have been working to further enhance the construction of the instrument. Companies such as Adams[8] and Besson[9] have been leading the
+                way in that respect. Adams euphoniums have developed an adjustable lead-pipe receiver, which allows players to change the timbre of the instrument to whatever they find preferable. Besson has been credited with the introducing an adjustable
+                main tuning-slide trigger, which allows players more flexibility with intonation.
+            </p>
+        </div>
+    </div>
+
+    <div class="gradient-gold-bottom text-center p-3 p-md-5">
+        <a href="purchase.html" class="btn bg-primary-dark p-3 text-light lead fs-3 rounded-pill">Purchase This Program</a>
+    </div>
+    <footer class="py-5 pr-2 pl-2 bg-dark text-light">
+        <div class="row p-5">
+            <div class="col-md-3">
+                <a class="h3 text-decoration-none" href="index.html">Society For Musical Progress</a>
+                <p>
+                    1234 Music Ave.
+                    <br> Mechanicsburg PA, 17050
+                    <br> United States of America
+                </p>
+            </div>
+            <div class="col-md-3">
+                <span class="h5">Programs:</span>
+                <br>
+                <a href="windprog.html" class="text-decoration-none">Wind Programs</a>
+                <br>
+                <a href="brassprog.html" class="text-decoration-none">Brass Programs</a>
+                <br>
+                <a href="percprog.html" class="text-decoration-none">Percussion Programs</a>
+                <br>
+                <a href="theory.html" class="text-decoration-none">Music Theory Programs</a>
+            </div>
+            <div class="col-md-3">
+                <span class="h5">Contact Us:</span>
+                <br>
+                <a class="text-decoration-none" href=""><i class="bi bi-phone"></i>&ensp;Phone: (717) 401-8737</a>
+                <br>
+                <i class="bi bi-envelope-check"></i>&ensp;E-mail -
+                <a href="mailto:musicadvancementsociety@gmail.com">musicadvancementsociety@gmail.com</a>
+                <br>
+                <a class="text-decoration-none" href=""><i class="bi bi-gear-wide"></i>&ensp;Web Team: Nikhil Khattar, Aditya Chattergee, Veer Shah</a>
+            </div>
+            <div class="col-md-3">
+                <span class="h5">See us on:</span>
+                <br>
+                <a class="text-decoration-none" href=""><i class="bi bi-instagram"></i> Instagram</a>
+                <br>
+                <a class="text-decoration-none" href="https://www.youtube.com/channel/UCXrmy8wS4om62TQBwkHdUwg"><i class="bi bi-youtube"></i> Youtube</a>
+                <br>
+                <a class="text-decoration-none" href=""><i class="bi bi-twitter"></i> Twitter</a>
+                <br>
+                <a class="text-decoration-none" href=""><i class="bi bi-facebook"></i> Facebook</a>
+                <br>
+                <a class="text-decoration-none" href="https://discord.gg/jN8GvmXS"><i class="bi bi-discord"></i> Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

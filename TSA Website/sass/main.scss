@@ -1,0 +1,25 @@
+$primary: #a89450;
+$activeColor:$primary;
+$card-border-width:none;
+.p-10 {
+    padding: 10%;
+}
+
+.p-7 {
+    padding: 7%;
+}
+
+.pl-7 {
+    padding-left: 7%;
+}
+
+.pr-7 {
+    padding-right: 7%;
+}
+
+@import "../node_modules/bootstrap/scss/functions.scss";
+@import "../node_modules/bootstrap/scss/variables.scss";
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../node_modules/hover.css/scss/options.scss";
+@import "../node_modules/hover.css/scss/hover.scss";

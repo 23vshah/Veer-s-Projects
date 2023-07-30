@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap');
+html {
+    height: 100%;
+}
+
+body>div {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+}
+
+nav {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+    font-family: 'Urbanist', sans-serif;
+}
+
+.quote {
+    font-family: 'Satisfy', cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Alegreya Sans SC', 'Flamenco', cursive;
+}
+
+.new-active {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hover {
+    transition: ease-in-out 0.5s;
+}
+
+.hover:hover {
+    color: #302a2a !important;
+}
+
+.homeBg {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5f/Avery_fisher_hall.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 40rem;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.flip-card-back {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 992px) {
+    .flip-no-show {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .carousel-show {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .full-brand {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .shrunk-brand {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home-in-drop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .no-seconds {
+        display: none;
+    }
+}
+
+.gradient-gold-right {
+    /* fallback for old browsers */
+    background: #ffffff;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0.35), rgba(161, 138, 74, 0.35));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.35), rgba(161, 138, 74, 0.35))
+}
+
+.gradient-gold-left {
+    /* fallback for old browsers */
+    background: #a18a4a;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(161, 138, 74, 0.35), rgba(255, 255, 255, 0.35));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(161, 138, 74, 0.35), rgba(255, 255, 255, 0.35))
+}
+
+.gradient-gold-bottom {
+    /* fallback for old browsers */
+    background: #a18a4a;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to top, rgba(161, 138, 74, 0.35), rgba(255, 255, 255, 0.35));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, rgba(161, 138, 74, 0.35), rgba(255, 255, 255, 0.35))
+}
+
+.gradient-gold-top {
+    /* fallback for old browsers */
+    background: #a18a4a;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom, rgba(161, 138, 74, 0.35), rgba(255, 255, 255, 0.35));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, rgba(161, 138, 74, 0.35), rgba(255, 255, 255, 0.35))
+}
+
+.bg-primary-dark {
+    background: #6b6146;
+}
