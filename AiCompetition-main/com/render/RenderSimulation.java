@@ -12,7 +12,7 @@ import processing.core.*;
 
 public class RenderSimulation
 {
-    public static PFont font = Global.getPro().createFont("src/AiCompetition/com/fonts/Technical Forest/font.otf", 20);
+    public static PFont font = Global.getPro().createFont("AiCompetition-main/com/fonts/Technical Forest/font.otf", 20);
     private static float centerX;
     private static float centerY;
     private static float scale;
